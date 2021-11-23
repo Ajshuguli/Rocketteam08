@@ -12,17 +12,25 @@ public class Savings {
 
     private float deposit() {
 
+        return 0.0F;
+
     }
 
     private float withdraw() {
+
+        return 0.0F;
 
     }
 
     private float transfer() {
 
+        return 0.0F;
+
     }
 
     private float interestEstimated() {
+
+        return 0.0F;
 
     }
 }

@@ -11,7 +11,7 @@ public class Account {
     private float withdrawals;
     private float savings;
     private float current;
-    private float CDT;
+    private float Cdt;
     private float transfer;
 
     private void requestBalance() {
