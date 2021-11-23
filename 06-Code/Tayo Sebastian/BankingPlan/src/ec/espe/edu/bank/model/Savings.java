@@ -7,16 +7,30 @@ package ec.espe.edu.bank.model;
 public class Savings {
 
     private String accountNumber;
+    private String depositDate;
+    private String retirementDate;
 
-    private void deposit() {
+    private float deposit() {
+
+        return 0.0F;
 
     }
 
-    private void advance() {
+    private float withdraw() {
+
+        return 0.0F;
 
     }
 
-    private void transfer() {
+    private float transfer() {
+
+        return 0.0F;
+
+    }
+
+    private float interestEstimated() {
+
+        return 0.0F;
 
     }
 }
