@@ -1,28 +1,34 @@
-package ec.espe.edu.bank.model;
+
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RocketTeam
+ * @author Rocket Team
  */
-public class CheckingAccount {
+public class Checking {
 
     private String accountNumber;
 
-    public CheckingAccount(String accountNumber) {
+    public Checking(String accountNumber) {
         this.accountNumber = accountNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Checking{" + "accountNumber=" + accountNumber + '}';
+    }
     
     
 
-    private void deposit() {
+    public void deposit() {
 
     }
 
-    private void advance() {
+    public void advance() {
 
     }
 
-    private void transfer() {
+    public void transfer() {
 
     }
 
@@ -39,5 +45,6 @@ public class CheckingAccount {
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
-
 }
+
+

@@ -1,24 +1,28 @@
-package ec.espe.edu.bank.model;
+
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RocketTeam
+ * @author Rocket Team
  */
 public class Profit {
 
     private float savingsTotal;
-    private float chekingTotal;
+    private float checkingTotal;
 
-    public Profit(float savingsTotal, float chekingTotal) {
+    public Profit(float savingsTotal, float checkingTotal) {
         this.savingsTotal = savingsTotal;
-        this.chekingTotal = chekingTotal;
+        this.checkingTotal = checkingTotal;
     }
+
 
     public float seeSavings() {
+
         return 0.0F;
+
     }
 
-    float seeCheking() {
+    public float seeChecking() {
         return 0.0F;
     }
 
@@ -37,16 +41,16 @@ public class Profit {
     }
 
     /**
-     * @return the chekingTotal
+     * @return the checkingTotal
      */
-    public float getChekingTotal() {
-        return chekingTotal;
+    public float getCheckingTotal() {
+        return checkingTotal;
     }
 
     /**
-     * @param chekingTotal the chekingTotal to set
+     * @param checkingTotal the checkingTotal to set
      */
-    public void setChekingTotal(float chekingTotal) {
-        this.chekingTotal = chekingTotal;
+    public void setCheckingTotal(float checkingTotal) {
+        this.checkingTotal = checkingTotal;
     }
 }

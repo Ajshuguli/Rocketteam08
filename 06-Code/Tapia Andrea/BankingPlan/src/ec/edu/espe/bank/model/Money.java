@@ -1,11 +1,11 @@
-package ec.espe.edu.bank.model;
+
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RocketTeam
+ * @author Rocket Team
  */
 public class Money {
-
     private float minValue;
     private float maxValue;
 
@@ -14,12 +14,13 @@ public class Money {
         this.maxValue = maxValue;
     }
     
-    private void estimateMaximun() {
-
+    
+    
+    public void estimateMaximun(){
+        
     }
-
-    private void estimateMinimun() {
-
+    public void estimateMinimun (){
+        
     }
 
     /**

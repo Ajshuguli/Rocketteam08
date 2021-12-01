@@ -1,8 +1,9 @@
-package ec.espe.edu.bank.model;
+
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RocketTeam
+ * @author Rocket Team
  */
 public class Profile {
 
@@ -18,7 +19,7 @@ public class Profile {
         this.password = password;
     }
 
-    private void changePassword() {
+    public void changePassword() {
 
     }
 

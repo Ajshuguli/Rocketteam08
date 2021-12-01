@@ -1,11 +1,11 @@
-package ec.edu.espe.bank.model;
+package ec.espe.edu.bank.model;
 
 /**
  *
- * @author Rocketteam
+ * @author RocketTeam
  */
 public class Savings {
-    
+
     private String accountNumber;
     private String depositDate;
     private String retirementDate;

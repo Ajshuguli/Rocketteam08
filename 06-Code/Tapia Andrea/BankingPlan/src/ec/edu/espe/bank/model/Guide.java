@@ -1,8 +1,8 @@
-package ec.espe.edu.bank.model;
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RockeTeam
+ * @author Rocket Team
  */
 public class Guide {
 

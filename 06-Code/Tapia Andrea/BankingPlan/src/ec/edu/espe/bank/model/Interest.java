@@ -1,8 +1,9 @@
-package ec.espe.edu.bank.model;
+
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RockeTeam
+ * @author Rocket Team
  */
 public class Interest {
 
@@ -12,9 +13,8 @@ public class Interest {
         this.interest = interest;
     }
 
+    public void generatedInteresrSavings() {
 
-
-    private void generatedInterestSavings() {
     }
 
     /**

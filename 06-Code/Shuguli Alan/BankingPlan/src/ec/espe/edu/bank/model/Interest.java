@@ -1,11 +1,11 @@
-package ec.edu.espe.bank.model;
+package ec.espe.edu.bank.model;
 
 /**
  *
- * @author Rocketteam
+ * @author RockeTeam
  */
 public class Interest {
-    
+
     private float interest;
 
     public void doStuff() {
@@ -15,4 +15,3 @@ public class Interest {
     private void generatedInterestSavings() {
     }
 }
-

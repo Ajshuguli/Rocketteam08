@@ -1,8 +1,9 @@
-package ec.espe.edu.bank.model;
+
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RocketTeam
+ * @author Rocket Team
  */
 public class Management {
 
@@ -15,8 +16,8 @@ public class Management {
         this.income = income;
         this.transaction = transaction;
     }
-    
-    
+ 
+
     public void doStuff() {
 
     }
