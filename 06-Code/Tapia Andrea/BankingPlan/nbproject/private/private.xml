@@ -3,8 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Codigo/BankingPlan/src/ec/edu/espe/bank/model/Profile.java</file>
             <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Codigo/BankingPlan/src/ec/espe/edu/bank/view/BankingPlan.java</file>
+=======
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bankmodel/Account.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bankview/BankingPlan.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bankmodel/Checking.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bankmodel/CDT.java</file>
+>>>>>>> 32d0e97dbd45aca772aea4f1324ca9e00e5b50f4
         </group>
     </open-files>
 </project-private>

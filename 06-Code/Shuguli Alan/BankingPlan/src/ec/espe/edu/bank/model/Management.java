@@ -1,11 +1,11 @@
-package ec.edu.espe.bank.model;
+package ec.espe.edu.bank.model;
 
 /**
  *
- * @author Rocketteam
+ * @author RocketTeam
  */
 public class Management {
-    
+
     private String checkStatus;
     private float income;
     private float transaction;
@@ -29,5 +29,3 @@ public class Management {
     private void manageAcc() {
     }
 }
-    
-
