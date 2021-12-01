@@ -1,8 +1,8 @@
-package ec.espe.edu.bank.model;
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RocketTeam
+ * @author Rocket Team
  */
 public class Account {
 
@@ -12,21 +12,35 @@ public class Account {
     private float current;
     private float CDT;
     private float transfer;
+
+    @Override
+    public String toString() {
+        return "Account{" + "balanceInquiry=" + balanceInquiry + ", withdrawals=" + withdrawals + ", savings=" + savings + ", current=" + current + ", CDT=" + CDT + ", transfer=" + transfer + '}';
+    }
     
     
-
-    private void requestBalance() {
-
-    }
-
-    private void seewithdraws() {
+    public void requestBalance() {
 
     }
 
-    private void transfer() {
+    public void seewithdraws() {
 
     }
 
+    public void transfer() {
+
+    }
+
+    public Account(float balanceInquiry, float withdrawals, float savings, float current, float CDT, float transfer) {
+        this.balanceInquiry = balanceInquiry;
+        this.withdrawals = withdrawals;
+        this.savings = savings;
+        this.current = current;
+        this.CDT = CDT;
+        this.transfer = transfer;
+    }
+
+    
     /**
      * @return the balanceInquiry
      */
