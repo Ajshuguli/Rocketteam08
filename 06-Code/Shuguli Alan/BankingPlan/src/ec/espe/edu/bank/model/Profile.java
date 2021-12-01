@@ -1,11 +1,11 @@
-package ec.edu.espe.bank.model;
+package ec.espe.edu.bank.model;
 
 /**
  *
- * @author DARK
+ * @author RocketTeam
  */
 public class Profile {
-    
+
     private String name;
     private int age;
     private int id;
@@ -15,6 +15,3 @@ public class Profile {
 
     }
 }
-
-
-
