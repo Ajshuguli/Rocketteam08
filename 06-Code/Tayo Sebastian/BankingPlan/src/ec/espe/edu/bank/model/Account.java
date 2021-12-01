@@ -13,6 +13,16 @@ public class Account {
     private float CDT;
     private float transfer;
 
+<<<<<<< HEAD
+=======
+    @Override
+    public String toString() {
+        return "Account{" + "balanceInquiry=" + balanceInquiry + ", withdrawals=" + withdrawals + ", savings=" + savings + ", current=" + current + ", CDT=" + CDT + ", transfer=" + transfer + '}';
+    }
+    
+    
+
+>>>>>>> e850d7259b8a87d2f97cc1c77310217b87e527aa
     public Account(float balanceInquiry, float withdrawals, float savings, float current, float CDT, float transfer) {
         this.balanceInquiry = balanceInquiry;
         this.withdrawals = withdrawals;
@@ -22,8 +32,11 @@ public class Account {
         this.transfer = transfer;
     }
 
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> e850d7259b8a87d2f97cc1c77310217b87e527aa
     private void requestBalance() {
 
     }
