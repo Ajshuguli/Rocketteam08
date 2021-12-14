@@ -13,8 +13,6 @@ public class Account {
     private float CDT;
     private float transfer;
     
-    
-
 
     @Override
     public String toString() {
@@ -43,6 +41,9 @@ public class Account {
 
     private void transfer() {
 
+    }
+    private Guide guide(){
+    return new Guide();
     }
 
     /**
