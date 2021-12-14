@@ -1,31 +1,35 @@
-package ec.espe.edu.bank.model;
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author RockeTeam
+ * @author RocketTeam
  */
 public class Guide {
 
     private String accountManagement;
-    private String savingsAccount;
-    private String currentAccount;
+    private String savingAccount;
+    private String checkingAccount;
     private String cdtAccount;
     private String interestManagement;
 
-    public Guide(String accountManagement, String savingsAccount, String currentAccount, String cdtAccount, String interestManagement) {
+    public Guide(String accountManagement, String savingAccount, String checkingAccount, String cdtAccount, String interestManagement) {
         this.accountManagement = accountManagement;
-        this.savingsAccount = savingsAccount;
-        this.currentAccount = currentAccount;
+        this.savingAccount = savingAccount;
+        this.checkingAccount = checkingAccount;
         this.cdtAccount = cdtAccount;
         this.interestManagement = interestManagement;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Guide{" + "accountManagement=" + accountManagement + ", savingAccount=" + savingAccount + ", checkingAccount=" + checkingAccount + ", cdtAccount=" + cdtAccount + ", interestManagement=" + interestManagement + '}';
+    }
+
     public void learnAccount() {
 
     }
 
-    public void learnSavings() {
+    public void learnSaving() {
 
     }
 
@@ -40,10 +44,10 @@ public class Guide {
     public void learnInterest() {
 
     }
-    
-    public Guide() {
-    
+    public Guide(){
+        
     }
+
     /**
      * @return the accountManagement
      */
@@ -59,31 +63,31 @@ public class Guide {
     }
 
     /**
-     * @return the savingsAccount
+     * @return the savingAccount
      */
-    public String getSavingsAccount() {
-        return savingsAccount;
+    public String getSavingAccount() {
+        return savingAccount;
     }
 
     /**
-     * @param savingsAccount the savingsAccount to set
+     * @param savingAccount the savingAccount to set
      */
-    public void setSavingsAccount(String savingsAccount) {
-        this.savingsAccount = savingsAccount;
+    public void setSavingAccount(String savingAccount) {
+        this.savingAccount = savingAccount;
     }
 
     /**
-     * @return the currentAccount
+     * @return the checkingAccount
      */
-    public String getCurrentAccount() {
-        return currentAccount;
+    public String getCheckingAccount() {
+        return checkingAccount;
     }
 
     /**
-     * @param currentAccount the currentAccount to set
+     * @param checkingAccount the checkingAccount to set
      */
-    public void setCurrentAccount(String currentAccount) {
-        this.currentAccount = currentAccount;
+    public void setCheckingAccount(String checkingAccount) {
+        this.checkingAccount = checkingAccount;
     }
 
     /**
@@ -113,4 +117,5 @@ public class Guide {
     public void setInterestManagement(String interestManagement) {
         this.interestManagement = interestManagement;
     }
+
 }
