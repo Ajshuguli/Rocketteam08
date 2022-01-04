@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 
 package ec.espe.edu.bank.view;
 
 import ec.espe.edu.bank.model.Account;
 
-=======
 package ec.espe.edu.bank.view;
 
 import ec.espe.edu.bank.model.Account;
 import ec.espe.edu.bank.model.Profile;
 import java.util.Scanner;
->>>>>>> e850d7259b8a87d2f97cc1c77310217b87e527aa
 /**
  *
  * @author Sebas
@@ -45,7 +42,6 @@ public class BankingPlan {
         password = scanner.nextInt();
        
         System.out.println("The name --> "+ name +" ;the Id --> "+ id +" ;age --> "+ age +" ;password --> "+ password);
->>>>>>> e850d7259b8a87d2f97cc1c77310217b87e527aa
     }
 
 }
