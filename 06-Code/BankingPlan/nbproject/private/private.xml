@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Profile.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Money.java</file>
@@ -16,5 +17,16 @@
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Saving.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Checking.java</file>
         </group>
+=======
+<<<<<<< HEAD
+        <group>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Interest.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Saving.java</file>
+        </group>
+=======
+        <group/>
+>>>>>>> d42db9c9a38cac40ec7fb3a518e8a80140adf844
+>>>>>>> 3025a5bc2d5aab342e4143271e1ad0fb92cfd1ed
     </open-files>
 </project-private>
