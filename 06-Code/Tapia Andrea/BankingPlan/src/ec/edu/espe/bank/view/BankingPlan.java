@@ -70,7 +70,7 @@ import utils.FileManager;
                                 advances = FileManager.read(FileName);
                                 String advance;
                                 advance = FileManager.read(FileName);
-                                
+
                                 System.out.println(" Enter the data for the advance");
                                 System.out.println("Account number");
                                 accountNumber = sc.nextInt();
@@ -84,7 +84,7 @@ import utils.FileManager;
                                 advances = accountNumber + ";" + name + ";" + amount + "\n";
                                 FileManager.save("data/advance.csv", advance);
                                 break;
-                                
+
                             case 3:
                                 String File_Name = "data/tranfer.csv";
                                 String transfers;
@@ -128,4 +128,4 @@ import utils.FileManager;
             }
         }
     }
-}
+                }
