@@ -8,19 +8,25 @@ import java.util.ArrayList;
  */
 public class Saving {
 
+    private String name;
     private String accountNumber;
+    private float amount;
     private ArrayList<Money> money;
     private ArrayList<Profit> profits;
 
-    public Saving(String accountNumber, ArrayList<Money> money, ArrayList<Profit> profits) {
+    public Saving(String name, String accountNumber, float amount, ArrayList<Money> money, ArrayList<Profit> profits) {
+        this.name = name;
         this.accountNumber = accountNumber;
+        this.amount = amount;
         this.money = money;
         this.profits = profits;
     }
 
+    
+
     @Override
     public String toString() {
-        return "Saving{" + "accountNumber=" + accountNumber + ", money=" + money + ", profits=" + profits + '}';
+        return "Saving{" + "accountNumber=" + getAccountNumber() + ", money=" + getMoney() + ", profits=" + getProfits() + '}';
     }
 
     public float deposit() {
@@ -40,6 +46,20 @@ public class Saving {
     }
 
     /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
      * @return the accountNumber
      */
     public String getAccountNumber() {
@@ -51,6 +71,20 @@ public class Saving {
      */
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    /**
+     * @return the amount
+     */
+    public float getAmount() {
+        return amount;
+    }
+
+    /**
+     * @param amount the amount to set
+     */
+    public void setAmount(float amount) {
+        this.amount = amount;
     }
 
     /**
@@ -80,5 +114,6 @@ public class Saving {
     public void setProfits(ArrayList<Profit> profits) {
         this.profits = profits;
     }
-
 }
+
+    
