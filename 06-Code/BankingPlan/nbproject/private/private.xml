@@ -3,7 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Profile.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Money.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/utils/FileManager.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Profit.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Account.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Cdt.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Management.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Guide.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Interest.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Saving.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/model/Checking.java</file>
+        </group>
+=======
+<<<<<<< HEAD
+        <group>
             <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java</file>
         </group>
+<<<<<<< HEAD
+=======
+=======
+        <group/>
+>>>>>>> d42db9c9a38cac40ec7fb3a518e8a80140adf844
+>>>>>>> 3025a5bc2d5aab342e4143271e1ad0fb92cfd1ed
+>>>>>>> 0bcd76e72023c10631c76cff390a288b84955733
     </open-files>
 </project-private>

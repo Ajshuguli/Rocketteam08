@@ -12,20 +12,29 @@ import utils.FileManager;
 
 /**
  *
- * @author Camila
+ * @author RocketTeam
  */
 public class BankingPlan {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         ArrayList<Checking> checking = new ArrayList<>();
-        ArrayList<Cdt> cdt = new ArrayList<>();
+        
         ArrayList<Money> money = new ArrayList<>();
         ArrayList<Profit> profits = new ArrayList<>();
+<<<<<<< HEAD
+        
+        Cdt cdt;
+        cdt = new Cdt(0, 0, 0, money) {};
+        System.out.println("Cdt Account" + cdt);
+        
+                
+=======
 
         Saving saving;
         int number, option;
         String accountNumber = "";
+>>>>>>> 3025a5bc2d5aab342e4143271e1ad0fb92cfd1ed
         String name = "";
         float amount = 0.F;
         ArrayList<Saving> savings = new ArrayList<>();
@@ -167,7 +176,19 @@ public class BankingPlan {
                 break;
             }
 
+<<<<<<< HEAD
+        System.out.println("The name --> " + name + " ;the Id --> " + id + " ;age --> " + age + " ;password --> " + password);
+
+        System.out.println("List of CdtAccounts");
+        String cdtAccounts;
+        String fileName = "data/cdtAccounts.csv";
+        cdtAccounts = FileManager.read(fileName);
+        System.out.println(" --> CdtAccounts <--\n" + cdtAccounts);
+        System.out.println("author Sebastian Tayo");
+
+=======
         }
+>>>>>>> 3025a5bc2d5aab342e4143271e1ad0fb92cfd1ed
     }
 
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * @author RocketTeam
  */
-public abstract class Cdt {
+public class Cdt {
 
     private float investmentMoney;
     private float interestRate;
