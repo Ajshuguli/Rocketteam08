@@ -14,10 +14,9 @@ import utils.FileManager;
  *
  * @author Camila
  */
-public class BankingPlan {
+ public class BankingPlan {
 
     public static void main(String[] args) throws Exception {
-
         int accountNumber;
         String name;
         float amount;
@@ -107,7 +106,10 @@ public class BankingPlan {
                         }
                     }
                 case 2:
+<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
+=======
 <<<<<<< HEAD
+>>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
                     System.out.println("---------------------------");
                     System.out.println("1. Deposit");
                     System.out.println("2. Withdraw");
@@ -115,6 +117,9 @@ public class BankingPlan {
                     System.out.println("4. Estiamte interest");
                     System.out.println("5. Exit");
                     System.out.println("---------------------------");
+<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
+                    option = sc.nextInt();
+=======
                      option = sc.nextInt();
                     break;
                 case 3:
@@ -125,10 +130,22 @@ public class BankingPlan {
                      option = sc.nextInt();
 =======
                     saving();
+>>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
                     break;
                 case 3:
+
+                    System.out.println("---------------------------");
+                    System.out.println("1. Calculate CDT");
+                    System.out.println("4. Exit");
+                    System.out.println("---------------------------");
+                    option = sc.nextInt();
+
                     Cdt();
+<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
+
+=======
 >>>>>>> 32cc60a3f85a9f10a115c5e0f632527a33fff73f
+>>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
                     break;
                 case 4:
                     exit = true;
@@ -136,8 +153,9 @@ public class BankingPlan {
                     break;
             }
         }
-
     }
+
+
 
     public static void Cdt() throws Exception {
         float number;
@@ -239,71 +257,9 @@ public class BankingPlan {
                     //see in csv format
                     System.out.println("Withdraw made successfully!");
                     System.out.println("Thanks for using our banking plan");
+
                 }
-                if (number == 5) {
-                    money.remove(amount);
-                    //see in csv format
-                    System.out.println("Enter the amount:");
-                    amount = teclado.nextFloat();
-                    System.out.println("Are you sure of this value? -> Yes(1)/No(0)");
-                    number = teclado.nextInt();
-                    if (number == 1) {
-                        money.remove(amount);
-                        //see in csv format
-                        System.out.println("Withdraw made successfully!");
-                        System.out.println("Thanks for using our banking plan\n");
-                    }
-                    if (number == 0) {
-                        System.out.println("Thanks for using our banking plan\n");
-                    }
-                }
-
-            }
-            if (option == 3) {
-                System.out.println("Enter full name of the account holder to transfer -> (No spaces)");
-                name = teclado.next();
-                System.out.println("Enter the amount to transfer:");
-                amount = teclado.nextFloat();
-                System.out.println("Enter the account number (20 digits): ");
-                accountNumber = teclado.next();
-                System.out.println("Check the data entered please!");
-                saving = new Saving(name, accountNumber, amount, money, profits);
-                System.out.println(saving);
-                System.out.println("\nAre you sure of this action? -> Yes(1)/No(0)");
-                number = teclado.nextInt();
-                if (number == 1) {
-                    money.remove(amount);
-                    String transfers = saving.getName() + ";" + saving.getAmount() + ";"
-                            + saving.getAccountNumber() + ";" + saving.getMoney() + ";" + saving.getProfits();
-                    FileManager.save("data/SavingAccount/transfers.csv", transfers);
-
-                    String fileName = "data/SavingAccount/transfers.csv";
-                    FileManager.read(fileName);
-                    transfers = FileManager.read(fileName);
-
-                    Gson gson;
-                    gson = new Gson();
-                    saving = new Saving(name, accountNumber, amount, money, profits);
-                    String jsonTransfers = gson.toJson(saving);
-                    FileManager.save("data/SavingAccount/transfers.json", jsonTransfers);
-
-                    fileName = ("data/SavingAccount/transfers.json");
-                    jsonTransfers = FileManager.read(fileName);
-
-                    System.out.println("Transfer made successfully!");
-                    System.out.println("Thanks for using our banking plan\n");
-                }
-                if (number == 0) {
-                    System.out.println("Thanks for using our banking plan\n");
-                }
-
-            }
-            if (option == 4) {
-                System.out.println("Thanks for using our banking plan");
-                System.out.println("See you soon!");
-                break;
             }
         }
-
     }
-}
+ }
