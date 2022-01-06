@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * @author RocketTeam
  */
-public class Saving {
+public class Saving  {
 
     private String name;
     private float amount;
@@ -29,7 +29,7 @@ public class Saving {
 
     
     public float deposit() {
-        
+        money.removeIf(money -> money.getMaxValue() == amount);
         return 0.F;
     }
 

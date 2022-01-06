@@ -1,5 +1,6 @@
 package ec.edu.espe.bank.view;
 
+import com.google.gson.Gson;
 import ec.edu.espe.bank.model.Cdt;
 import ec.edu.espe.bank.model.Checking;
 import ec.edu.espe.bank.model.Money;
@@ -7,6 +8,7 @@ import ec.edu.espe.bank.model.Profit;
 import ec.edu.espe.bank.model.Saving;
 import java.util.ArrayList;
 import java.util.Scanner;
+import utils.FileManager;
 
 /**
  *
@@ -48,7 +50,24 @@ public class BankingPlan {
                 System.out.println("\nAre you sure of this action? -> Yes(1)/No(0)");
                 number = teclado.nextInt();
                 if (number == 1) {
-                    //action to remove money from the account
+                    money.remove(amount);
+                    String deposits = saving.getName() + ";" + saving.getAmount() + ";"
+                            + saving.getAccountNumber() + ";" + saving.getMoney() + ";" + saving.getProfits();
+                    FileManager.save("data/SavingAccount/deposits.csv", deposits);
+
+                    String fileName = "data/SavingAccount/deposits.csv";
+                    FileManager.read(fileName);
+                    deposits = FileManager.read(fileName);
+
+                    Gson gson;
+                    gson = new Gson();
+                    saving = new Saving(name, amount, accountNumber, money, profits);
+                    String jsonDeposits = gson.toJson(saving);
+                    FileManager.save("data/SavingAccount/deposits.json", jsonDeposits);
+
+                    fileName = ("data/SavingAccount/deposits.json");
+                    jsonDeposits = FileManager.read(fileName);
+
                     System.out.println("Deposit made successfully!");
                     System.out.println("Thanks for using our banking plan\n");
                 }
@@ -61,33 +80,39 @@ public class BankingPlan {
                 System.out.println("1) 10 \n2) 20 \n3) 50 \n4) 80 \n5) Other");
                 number = teclado.nextInt();
                 if (number == 1) {
-                    //action to remove money from the account
+                    money.remove(amount);
+                    //see in csv format
                     System.out.println("Withdraw made successfully!");
                     System.out.println("Thanks for using our banking plan");
                 }
                 if (number == 2) {
-                    //action to remove money from the account
+                    money.remove(amount);
+                    //see in csv format
                     System.out.println("Withdraw made successfully!");
                     System.out.println("Thanks for using our banking plan");
                 }
                 if (number == 3) {
-                    //action to remove money from the account
+                    money.remove(amount);
+                    //see in csv format
                     System.out.println("Withdraw made successfully!");
                     System.out.println("Thanks for using our banking plan");
                 }
                 if (number == 4) {
-                    //action to remove money from the account
+                    money.remove(amount);
+                    //see in csv format
                     System.out.println("Withdraw made successfully!");
                     System.out.println("Thanks for using our banking plan");
                 }
                 if (number == 5) {
-                    //action to remove money from the account
+                    money.remove(amount);
+                    //see in csv format
                     System.out.println("Enter the amount:");
                     amount = teclado.nextFloat();
                     System.out.println("Are you sure of this value? -> Yes(1)/No(0)");
                     number = teclado.nextInt();
                     if (number == 1) {
-                        //action to remove money from the account
+                        money.remove(amount);
+                        //see in csv format
                         System.out.println("Withdraw made successfully!");
                         System.out.println("Thanks for using our banking plan\n");
                     }
@@ -107,10 +132,27 @@ public class BankingPlan {
                 System.out.println("Check the data entered please!");
                 saving = new Saving(name, amount, accountNumber, money, profits);
                 System.out.println(saving);
-                System.out.println("Are you sure of this action? -> Yes(1)/No(0)");
+                System.out.println("\nAre you sure of this action? -> Yes(1)/No(0)");
                 number = teclado.nextInt();
                 if (number == 1) {
-                    //action to remove money from the account
+                    money.remove(amount);
+                    String transfers = saving.getName() + ";" + saving.getAmount() + ";"
+                            + saving.getAccountNumber() + ";" + saving.getMoney() + ";" + saving.getProfits();
+                    FileManager.save("data/SavingAccount/transfers.csv", transfers);
+
+                    String fileName = "data/SavingAccount/transfers.csv";
+                    FileManager.read(fileName);
+                    transfers = FileManager.read(fileName);
+
+                    Gson gson;
+                    gson = new Gson();
+                    saving = new Saving(name, amount, accountNumber, money, profits);
+                    String jsonTransfers = gson.toJson(saving);
+                    FileManager.save("data/SavingAccount/transfers.json", jsonTransfers);
+
+                    fileName = ("data/SavingAccount/transfers.json");
+                    jsonTransfers = FileManager.read(fileName);
+
                     System.out.println("Transfer made successfully!");
                     System.out.println("Thanks for using our banking plan\n");
                 }
