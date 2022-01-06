@@ -107,28 +107,10 @@ public class BankingPlan {
                         }
                     }
                 case 2:
-<<<<<<< HEAD
-                    System.out.println("---------------------------");
-                    System.out.println("1. Deposit");
-                    System.out.println("2. Withdraw");
-                    System.out.println("3. Transfer");
-                    System.out.println("4. Estiamte interest");
-                    System.out.println("5. Exit");
-                    System.out.println("---------------------------");
-                     option = sc.nextInt();
-                    break;
-                case 3:
-                    System.out.println("---------------------------");
-                    System.out.println("1. Calculate CDT");
-                    System.out.println("4. Exit");
-                    System.out.println("---------------------------");
-                     option = sc.nextInt();
-=======
                     saving();
                     break;
                 case 3:
                     Cdt();
->>>>>>> 32cc60a3f85a9f10a115c5e0f632527a33fff73f
                     break;
                 case 4:
                     exit = true;
