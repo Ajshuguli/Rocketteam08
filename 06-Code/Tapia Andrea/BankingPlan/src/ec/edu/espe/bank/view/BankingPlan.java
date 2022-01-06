@@ -112,12 +112,14 @@ public class BankingPlan {
                     System.out.println("4. Estiamte interest");
                     System.out.println("5. Exit");
                     System.out.println("---------------------------");
+                     option = sc.nextInt();
                     break;
                 case 3:
                     System.out.println("---------------------------");
                     System.out.println("1. Calculate CDT");
                     System.out.println("4. Exit");
                     System.out.println("---------------------------");
+                     option = sc.nextInt();
                     break;
                 case 4:
                     exit = true;
