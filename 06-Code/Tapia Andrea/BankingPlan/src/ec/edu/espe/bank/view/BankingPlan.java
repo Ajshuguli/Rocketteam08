@@ -110,10 +110,7 @@ public class BankingPlan {
                     saving();
                     break;
                 case 3:
-                    System.out.println("---------------------------");
-                    System.out.println("1. Calculate CDT");
-                    System.out.println("4. Exit");
-                    System.out.println("---------------------------");
+                    Cdt();
                     break;
                 case 4:
                     exit = true;
@@ -122,6 +119,22 @@ public class BankingPlan {
             }
         }
 
+    }
+
+    public static void Cdt() throws Exception {
+        float number;
+        float time;
+        float interest;
+        interest = (float) 0.05;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Calculated Cdt");
+        System.out.println("Enter the amount");
+        number = sc.nextFloat();
+        System.out.println("Enter the time");
+        time = sc.nextFloat();
+        System.out.println("The cdt is " + number / 360 * time);
+        
     }
 
     public static void saving() throws Exception {
