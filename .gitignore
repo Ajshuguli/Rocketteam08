@@ -32,3 +32,10 @@ hs_err_pid*
 >>>>>>> e850d7259b8a87d2f97cc1c77310217b87e527aa
 >>>>>>> 74623974aff063f75ec8725df623a9e75020a84b
 /06-Code/BankingPlan/dist/
+<<<<<<< HEAD
+/06-Code/BankingPlanGUI/BankingPlanGUI/nbproject/private/
+/06-Code/BankingPlanInterface/BankingPlanGUI/nbproject/private/
+/06-Code/Tapia Andrea/BankingPlan/dist/
+=======
+/06-Code/Simbaña Gustavo/New Folder/BankingPlanGui/nbproject/private/
+>>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253
