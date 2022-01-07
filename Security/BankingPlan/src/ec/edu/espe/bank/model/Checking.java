@@ -6,71 +6,33 @@ import java.util.ArrayList;
  *
  * @author RocketTeam
  */
-public class Saving {
-    
-    private String name;
-    private float amount;
+public class Checking {
+
     private String accountNumber;
     private ArrayList<Money> money;
     private ArrayList<Profit> profits;
 
-    public Saving(String name, float amount, String accountNumber, ArrayList<Money> money, ArrayList<Profit> profits) {
-        this.name = name;
-        this.amount = amount;
+    public Checking(String accountNumber, ArrayList<Money> money, ArrayList<Profit> profits) {
         this.accountNumber = accountNumber;
         this.money = money;
         this.profits = profits;
     }
 
-   
-
     @Override
     public String toString() {
-        return "Saving{" + "accountNumber=" + getAccountNumber() + ", money=" + getMoney() + ", profits=" + getProfits() + '}';
+        return "Checking{" + "accountNumber=" + accountNumber + ", money=" + money + ", profits=" + profits + '}';
     }
 
     public float deposit() {
         return 0.F;
     }
 
-    public float withdraw() {
+    public float advance() {
         return 0.F;
     }
 
     public float transfer() {
         return 0.F;
-    }
-
-    public Interest estimateInterest() {
-        return  new Interest();
-    }
-
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return the amount
-     */
-    public float getAmount() {
-        return amount;
-    }
-
-    /**
-     * @param amount the amount to set
-     */
-    public void setAmount(float amount) {
-        this.amount = amount;
     }
 
     /**

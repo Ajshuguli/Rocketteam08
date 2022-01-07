@@ -7,22 +7,22 @@ import java.util.ArrayList;
  * @author RocketTeam
  */
 public class Saving {
-    
+
     private String name;
-    private float amount;
     private String accountNumber;
+    private float amount;
     private ArrayList<Money> money;
     private ArrayList<Profit> profits;
 
-    public Saving(String name, float amount, String accountNumber, ArrayList<Money> money, ArrayList<Profit> profits) {
+    public Saving(String name, String accountNumber, float amount, ArrayList<Money> money, ArrayList<Profit> profits) {
         this.name = name;
-        this.amount = amount;
         this.accountNumber = accountNumber;
+        this.amount = amount;
         this.money = money;
         this.profits = profits;
     }
 
-   
+    
 
     @Override
     public String toString() {
@@ -60,20 +60,6 @@ public class Saving {
     }
 
     /**
-     * @return the amount
-     */
-    public float getAmount() {
-        return amount;
-    }
-
-    /**
-     * @param amount the amount to set
-     */
-    public void setAmount(float amount) {
-        this.amount = amount;
-    }
-
-    /**
      * @return the accountNumber
      */
     public String getAccountNumber() {
@@ -85,6 +71,20 @@ public class Saving {
      */
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    /**
+     * @return the amount
+     */
+    public float getAmount() {
+        return amount;
+    }
+
+    /**
+     * @param amount the amount to set
+     */
+    public void setAmount(float amount) {
+        this.amount = amount;
     }
 
     /**
@@ -114,5 +114,6 @@ public class Saving {
     public void setProfits(ArrayList<Profit> profits) {
         this.profits = profits;
     }
-
 }
+
+    
