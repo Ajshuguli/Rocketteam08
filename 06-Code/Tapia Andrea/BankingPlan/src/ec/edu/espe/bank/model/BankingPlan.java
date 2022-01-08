@@ -1,4 +1,4 @@
-package ec.edu.espe.bank.view;
+package ec.edu.espe.bank.model;
 
 import com.google.gson.Gson;
 import ec.edu.espe.bank.model.Cdt;
@@ -12,7 +12,7 @@ import utils.FileManager;
 
 /**
  *
- * @author Camila
+ * @author RocketTeam
  */
  public class BankingPlan {
 
@@ -106,10 +106,7 @@ import utils.FileManager;
                         }
                     }
                 case 2:
-<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
-=======
-<<<<<<< HEAD
->>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
+
                     System.out.println("---------------------------");
                     System.out.println("1. Deposit");
                     System.out.println("2. Withdraw");
@@ -117,9 +114,9 @@ import utils.FileManager;
                     System.out.println("4. Estiamte interest");
                     System.out.println("5. Exit");
                     System.out.println("---------------------------");
-<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
+
                     option = sc.nextInt();
-=======
+
                      option = sc.nextInt();
                     break;
                 case 3:
@@ -128,9 +125,9 @@ import utils.FileManager;
                     System.out.println("4. Exit");
                     System.out.println("---------------------------");
                      option = sc.nextInt();
-=======
+
                     saving();
->>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
+
                     break;
                 case 3:
 
@@ -141,11 +138,7 @@ import utils.FileManager;
                     option = sc.nextInt();
 
                     Cdt();
-<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
 
-=======
->>>>>>> 32cc60a3f85a9f10a115c5e0f632527a33fff73f
->>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
                     break;
                 case 4:
                     exit = true;
