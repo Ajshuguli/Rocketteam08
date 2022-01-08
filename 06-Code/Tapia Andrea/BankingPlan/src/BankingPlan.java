@@ -1,4 +1,4 @@
-package ec.edu.espe.bank.model;
+package ec.edu.espe.bank.view;
 
 import com.google.gson.Gson;
 import ec.edu.espe.bank.model.Cdt;
@@ -12,7 +12,7 @@ import utils.FileManager;
 
 /**
  *
- * @author RocketTeam
+ * @author Camila
  */
  public class BankingPlan {
 
@@ -105,10 +105,11 @@ import utils.FileManager;
                                 break;
                         }
                     }
-                
                 case 2:
+<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
+=======
 <<<<<<< HEAD
-
+>>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
                     System.out.println("---------------------------");
                     System.out.println("1. Deposit");
                     System.out.println("2. Withdraw");
@@ -116,9 +117,9 @@ import utils.FileManager;
                     System.out.println("4. Estiamte interest");
                     System.out.println("5. Exit");
                     System.out.println("---------------------------");
-
+<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
                     option = sc.nextInt();
-
+=======
                      option = sc.nextInt();
                     break;
                 case 3:
@@ -127,19 +128,24 @@ import utils.FileManager;
                     System.out.println("4. Exit");
                     System.out.println("---------------------------");
                      option = sc.nextInt();
-
-                    saving();
-
 =======
                     saving();
->>>>>>> 7fbec409229cda6864571736139ac96572474b32
+>>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
                     break;
                 case 3:
+
+                    System.out.println("---------------------------");
+                    System.out.println("1. Calculate CDT");
+                    System.out.println("4. Exit");
+                    System.out.println("---------------------------");
+                    option = sc.nextInt();
+
                     Cdt();
-<<<<<<< HEAD
+<<<<<<< HEAD:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java
 
 =======
->>>>>>> 7fbec409229cda6864571736139ac96572474b32
+>>>>>>> 32cc60a3f85a9f10a115c5e0f632527a33fff73f
+>>>>>>> 8535f82c7d452fc1d68092e7652d2266dd0a6253:06-Code/Tapia Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlan.java
                     break;
                 case 4:
                     exit = true;
@@ -194,7 +200,7 @@ import utils.FileManager;
                 System.out.println("Enter the amount to deposit");
                 amount = teclado.nextFloat();
                 System.out.println("Check the data entered please!");
-                saving = new Saving(name, amount, accountNumber, money, profits);
+                saving = new Saving(name, accountNumber, amount, money, profits);
                 System.out.println(saving);
                 System.out.println("\nAre you sure of this action? -> Yes(1)/No(0)");
                 number = teclado.nextInt();
@@ -210,7 +216,7 @@ import utils.FileManager;
 
                     Gson gson;
                     gson = new Gson();
-                    saving = new Saving(name, amount, accountNumber, money, profits);
+                    saving = new Saving(name, accountNumber, amount, money, profits);
                     String jsonDeposits = gson.toJson(saving);
                     FileManager.save("data/SavingAccount/deposits.json", jsonDeposits);
 

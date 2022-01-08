@@ -3,6 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Saving.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Cdt.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Guide.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/BankingPlan.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlanGui.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Connection.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlanGui.java</file>
+            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/view/FrmAccount.java</file>
+            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/view/FrmCATransfer.java</file>
+            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/view/FrmCADeposit.java</file>
+=======
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Connection.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/view/BankingPlanGUI.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Cdt.java</file>
@@ -17,6 +31,8 @@
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Money.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/utils/FileManager.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/Tapia%20Andrea/BankingPlan/src/ec/edu/espe/bank/model/Checking.java</file>
+>>>>>>> 8b8e8d99f1ce479f9cf8d1f83f0f8d71de627031
+>>>>>>> 1e7e49f98f94db6a6a08144df422a2cb6d36a438
         </group>
     </open-files>
 </project-private>

@@ -1,4 +1,4 @@
-package ec.edu.espe.bank.model;
+package ec.edu.espe.bank.view;
 
 import com.google.gson.Gson;
 import ec.edu.espe.bank.model.Cdt;
@@ -12,11 +12,12 @@ import utils.FileManager;
 
 /**
  *
- * @author RocketTeam
+ * @author Camila
  */
- public class BankingPlan {
+public class BankingPlan {
 
     public static void main(String[] args) throws Exception {
+
         int accountNumber;
         String name;
         float amount;
@@ -105,41 +106,11 @@ import utils.FileManager;
                                 break;
                         }
                     }
-                
                 case 2:
-<<<<<<< HEAD
-
-                    System.out.println("---------------------------");
-                    System.out.println("1. Deposit");
-                    System.out.println("2. Withdraw");
-                    System.out.println("3. Transfer");
-                    System.out.println("4. Estiamte interest");
-                    System.out.println("5. Exit");
-                    System.out.println("---------------------------");
-
-                    option = sc.nextInt();
-
-                     option = sc.nextInt();
-                    break;
-                case 3:
-                    System.out.println("---------------------------");
-                    System.out.println("1. Calculate CDT");
-                    System.out.println("4. Exit");
-                    System.out.println("---------------------------");
-                     option = sc.nextInt();
-
                     saving();
-
-=======
-                    saving();
->>>>>>> 7fbec409229cda6864571736139ac96572474b32
                     break;
                 case 3:
                     Cdt();
-<<<<<<< HEAD
-
-=======
->>>>>>> 7fbec409229cda6864571736139ac96572474b32
                     break;
                 case 4:
                     exit = true;
@@ -147,9 +118,8 @@ import utils.FileManager;
                     break;
             }
         }
+
     }
-
-
 
     public static void Cdt() throws Exception {
         float number;
@@ -194,7 +164,7 @@ import utils.FileManager;
                 System.out.println("Enter the amount to deposit");
                 amount = teclado.nextFloat();
                 System.out.println("Check the data entered please!");
-                saving = new Saving(name, amount, accountNumber, money, profits);
+                saving = new Saving(name, accountNumber, amount, money, profits);
                 System.out.println(saving);
                 System.out.println("\nAre you sure of this action? -> Yes(1)/No(0)");
                 number = teclado.nextInt();
@@ -210,7 +180,7 @@ import utils.FileManager;
 
                     Gson gson;
                     gson = new Gson();
-                    saving = new Saving(name, amount, accountNumber, money, profits);
+                    saving = new Saving(name, accountNumber, amount, money, profits);
                     String jsonDeposits = gson.toJson(saving);
                     FileManager.save("data/SavingAccount/deposits.json", jsonDeposits);
 
@@ -251,9 +221,71 @@ import utils.FileManager;
                     //see in csv format
                     System.out.println("Withdraw made successfully!");
                     System.out.println("Thanks for using our banking plan");
-
                 }
+                if (number == 5) {
+                    money.remove(amount);
+                    //see in csv format
+                    System.out.println("Enter the amount:");
+                    amount = teclado.nextFloat();
+                    System.out.println("Are you sure of this value? -> Yes(1)/No(0)");
+                    number = teclado.nextInt();
+                    if (number == 1) {
+                        money.remove(amount);
+                        //see in csv format
+                        System.out.println("Withdraw made successfully!");
+                        System.out.println("Thanks for using our banking plan\n");
+                    }
+                    if (number == 0) {
+                        System.out.println("Thanks for using our banking plan\n");
+                    }
+                }
+
+            }
+            if (option == 3) {
+                System.out.println("Enter full name of the account holder to transfer -> (No spaces)");
+                name = teclado.next();
+                System.out.println("Enter the amount to transfer:");
+                amount = teclado.nextFloat();
+                System.out.println("Enter the account number (20 digits): ");
+                accountNumber = teclado.next();
+                System.out.println("Check the data entered please!");
+                saving = new Saving(name, accountNumber, amount, money, profits);
+                System.out.println(saving);
+                System.out.println("\nAre you sure of this action? -> Yes(1)/No(0)");
+                number = teclado.nextInt();
+                if (number == 1) {
+                    money.remove(amount);
+                    String transfers = saving.getName() + ";" + saving.getAmount() + ";"
+                            + saving.getAccountNumber() + ";" + saving.getMoney() + ";" + saving.getProfits();
+                    FileManager.save("data/SavingAccount/transfers.csv", transfers);
+
+                    String fileName = "data/SavingAccount/transfers.csv";
+                    FileManager.read(fileName);
+                    transfers = FileManager.read(fileName);
+
+                    Gson gson;
+                    gson = new Gson();
+                    saving = new Saving(name, accountNumber, amount, money, profits);
+                    String jsonTransfers = gson.toJson(saving);
+                    FileManager.save("data/SavingAccount/transfers.json", jsonTransfers);
+
+                    fileName = ("data/SavingAccount/transfers.json");
+                    jsonTransfers = FileManager.read(fileName);
+
+                    System.out.println("Transfer made successfully!");
+                    System.out.println("Thanks for using our banking plan\n");
+                }
+                if (number == 0) {
+                    System.out.println("Thanks for using our banking plan\n");
+                }
+
+            }
+            if (option == 4) {
+                System.out.println("Thanks for using our banking plan");
+                System.out.println("See you soon!");
+                break;
             }
         }
+
     }
- }
+}
