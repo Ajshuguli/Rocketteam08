@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package ec.edu.espe.bank.model;
 
 /**
@@ -132,7 +129,7 @@ public class FmrManagement extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-        FmrCheckAccount abrir = new FmrCheckAccount ();
+        FmrManageAccount abrir = new FmrManageAccount ();
         abrir.setVisible(true);
         this.setVisible (false);
     }//GEN-LAST:event_btnOKActionPerformed
