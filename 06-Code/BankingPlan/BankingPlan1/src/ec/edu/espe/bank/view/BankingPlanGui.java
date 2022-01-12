@@ -198,7 +198,7 @@ public class BankingPlanGui extends javax.swing.JFrame {
 
     private void InformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformationActionPerformed
         Information verventana = new Information();
-        Mnu.add(verventana);
+        jDesktopPane1.add(verventana);
         verventana.show();
     }//GEN-LAST:event_InformationActionPerformed
 
