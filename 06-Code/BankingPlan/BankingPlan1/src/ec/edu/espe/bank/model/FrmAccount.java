@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ec.edu.espe.bank.view;
+package ec.edu.espe.bank.model;
+package ec.edu.espe.bank.model;
+
+import ec.edu.espe.bank.view.FrmCdtAccount;
+import ec.edu.espe.bank.view.FrmCdtAccount;
 
 /**
  *
@@ -45,6 +49,11 @@ public class FrmAccount extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         jButton1.setText("Checking");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Saving");
 
@@ -100,10 +109,16 @@ public class FrmAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       FrmCdtAccount abrir = new FrmCdtAccount();
+        FrmCdtAccount abrir = new FrmCdtAccount();
         abrir.setVisible(true);
-        this.setVisible (false);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FrmCheckingAccount abrir = new FrmCheckingAccount();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

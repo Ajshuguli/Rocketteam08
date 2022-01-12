@@ -1,9 +1,10 @@
 
 package ec.edu.espe.bank.view;
 
+import ec.edu.espe.bank.model.FrmAccount;
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.bank.model.Connection;
-import ec.edu.espe.bank.model.FrmSavingAccount;
+import ec.edu.espe.bank.model.FrmCheckingAccount;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
@@ -48,9 +49,9 @@ public class BankingPlanGui extends javax.swing.JFrame {
         ButtonExit = new javax.swing.JButton();
         btnLogin = new javax.swing.JButton();
         btnRegister = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        Mnu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        Information = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,13 +92,18 @@ public class BankingPlanGui extends javax.swing.JFrame {
 
         jMenu1.setText("Guide");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setText("Information");
-        jMenu1.add(jMenuItem1);
+        Information.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        Information.setText("Information");
+        Information.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InformationActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Information);
 
-        jMenuBar1.add(jMenu1);
+        Mnu.add(jMenu1);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(Mnu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,6 +196,12 @@ public class BankingPlanGui extends javax.swing.JFrame {
         this.setVisible (false);
     }//GEN-LAST:event_btnLoginActionPerformed
 
+    private void InformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformationActionPerformed
+        Information verventana = new Information();
+        Mnu.add(verventana);
+        verventana.show();
+    }//GEN-LAST:event_InformationActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -227,6 +239,8 @@ public class BankingPlanGui extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonExit;
+    private javax.swing.JMenuItem Information;
+    private javax.swing.JMenuBar Mnu;
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
     private javax.swing.JLabel jLabel1;
@@ -234,8 +248,6 @@ public class BankingPlanGui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JTextField txtId;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUser;
