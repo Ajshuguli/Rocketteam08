@@ -1,9 +1,10 @@
 
 package ec.edu.espe.bank.view;
 
+import ec.edu.espe.bank.model.FrmAccount;
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.bank.model.Connection;
-import ec.edu.espe.bank.model.FrmSavingAccount;
+import ec.edu.espe.bank.model.FrmCheckingAccount;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;

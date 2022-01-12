@@ -1,19 +1,16 @@
 
-package ec.edu.espe.bank.view;
-
-import ec.edu.espe.bank.model.FrmInterest;
-
+package ec.edu.espe.bank.model;
 
 /**
  *
- * @author Camila
+ * @author Andrea 
  */
-public class FrmSavingAccount extends javax.swing.JFrame {
+public class FrmCheckingAccount extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmSavingAccount
      */
-    public FrmSavingAccount() {
+    public FrmCheckingAccount() {
         initComponents();
     }
 
@@ -34,17 +31,16 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         txtAccountNumber = new javax.swing.JTextField();
-        btnOK = new javax.swing.JButton();
-        btnCancel = new javax.swing.JButton();
+        txtOk = new javax.swing.JButton();
+        txtCancel = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        btnDeposit = new javax.swing.JButton();
-        btnWithdraw = new javax.swing.JButton();
-        btnTransfer = new javax.swing.JButton();
-        btnEstInterest = new javax.swing.JButton();
-        btnReturn = new javax.swing.JButton();
+        txtDeposist = new javax.swing.JButton();
+        txtAdvance = new javax.swing.JButton();
+        txtTransfer = new javax.swing.JButton();
+        txtReturn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        txtTable = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         txtAmount = new javax.swing.JTextField();
 
@@ -55,18 +51,18 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setText("Saving Account");
+        jLabel2.setText("Checking Account");
 
         jLabel3.setText("Name User:");
 
         jLabel4.setText("Account Number:");
 
-        btnOK.setText("OK");
+        txtOk.setText("OK");
 
-        btnCancel.setText("Cancel");
-        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+        txtCancel.setText("Cancel");
+        txtCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelActionPerformed(evt);
+                txtCancelActionPerformed(evt);
             }
         });
 
@@ -90,9 +86,9 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                         .addComponent(txtAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(247, 247, 247)
-                        .addComponent(btnOK)
+                        .addComponent(txtOk)
                         .addGap(26, 26, 26)
-                        .addComponent(btnCancel)))
+                        .addComponent(txtCancel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -108,68 +104,56 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                     .addComponent(txtAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnOK)
-                    .addComponent(btnCancel))
+                    .addComponent(txtOk)
+                    .addComponent(txtCancel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnDeposit.setText("Deposit");
+        txtDeposist.setText("Deposit");
 
-        btnWithdraw.setText("Withdraw");
+        txtAdvance.setText("Advance");
 
-        btnTransfer.setText("Transfer");
+        txtTransfer.setText("Transfer");
 
-        btnEstInterest.setText("EstimateInterest");
-        btnEstInterest.addActionListener(new java.awt.event.ActionListener() {
+        txtReturn.setText("Return");
+        txtReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstInterestActionPerformed(evt);
+                txtReturnActionPerformed(evt);
             }
         });
-
-        btnReturn.setText("Return");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(btnDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnWithdraw, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(10, 10, 10))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(btnReturn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnTransfer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnEstInterest, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
-                .addGap(6, 6, 6))
+                .addGap(62, 62, 62)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtDeposist, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                    .addComponent(txtAdvance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtTransfer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtReturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDeposit)
-                    .addComponent(btnWithdraw))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEstInterest)
-                    .addComponent(btnTransfer))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnReturn)
-                .addContainerGap())
+                .addComponent(txtDeposist)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtAdvance)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtTransfer)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtReturn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        txtTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -177,10 +161,10 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "Id", "Account number", "Amount"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(txtTable);
 
         jLabel5.setText("Amount:");
 
@@ -244,16 +228,16 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEstInterestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstInterestActionPerformed
-        FrmInterest open = new FrmInterest ();
-        open.setVisible(true);
-        this.setVisible (false);
-    }//GEN-LAST:event_btnEstInterestActionPerformed
-
-    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+    private void txtCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCancelActionPerformed
         txtName.setText("");
         txtAccountNumber.setText("");
-    }//GEN-LAST:event_btnCancelActionPerformed
+    }//GEN-LAST:event_txtCancelActionPerformed
+
+    private void txtReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReturnActionPerformed
+        FrmAccount open = new FrmAccount ();
+        open.setVisible(true);
+        this.setVisible (false);
+    }//GEN-LAST:event_txtReturnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,32 +256,26 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmSavingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCheckingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmSavingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCheckingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmSavingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCheckingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmSavingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCheckingAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmSavingAccount().setVisible(true);
+                new FrmCheckingAccount().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnDeposit;
-    private javax.swing.JButton btnEstInterest;
-    private javax.swing.JButton btnOK;
-    private javax.swing.JButton btnReturn;
-    private javax.swing.JButton btnTransfer;
-    private javax.swing.JButton btnWithdraw;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -308,9 +286,15 @@ public class FrmSavingAccount extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtAccountNumber;
+    private javax.swing.JButton txtAdvance;
     private javax.swing.JTextField txtAmount;
+    private javax.swing.JButton txtCancel;
+    private javax.swing.JButton txtDeposist;
     private javax.swing.JTextField txtName;
+    private javax.swing.JButton txtOk;
+    private javax.swing.JButton txtReturn;
+    private javax.swing.JTable txtTable;
+    private javax.swing.JButton txtTransfer;
     // End of variables declaration//GEN-END:variables
 }
