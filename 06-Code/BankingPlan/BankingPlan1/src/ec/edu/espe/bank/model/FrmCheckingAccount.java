@@ -1,6 +1,8 @@
 
 package ec.edu.espe.bank.model;
 
+import ec.edu.espe.bank.view.FrmAccount;
+
 /**
  *
  * @author Andrea 
