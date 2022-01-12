@@ -182,10 +182,10 @@ public class BankingPlanGui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        
+       
         JOptionPane.showMessageDialog(this, "Successful", "Successful!", JOptionPane.QUESTION_MESSAGE);
         
-        FrmAccount open = new FrmAccount ();
+        FrmSavingAccount open = new FrmSavingAccount ();
         open.setVisible(true);
         this.setVisible (false);
     }//GEN-LAST:event_btnLoginActionPerformed
