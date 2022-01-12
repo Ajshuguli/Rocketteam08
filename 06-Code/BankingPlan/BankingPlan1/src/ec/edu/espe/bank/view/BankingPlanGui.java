@@ -1,9 +1,10 @@
 
 package ec.edu.espe.bank.view;
 
+import ec.edu.espe.bank.model.FrmAccount;
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.bank.model.Connection;
-import ec.edu.espe.bank.model.FrmSavingAccount;
+import ec.edu.espe.bank.model.FrmCheckingAccount;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
@@ -182,10 +183,10 @@ public class BankingPlanGui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-       
+        
         JOptionPane.showMessageDialog(this, "Successful", "Successful!", JOptionPane.QUESTION_MESSAGE);
         
-        FrmSavingAccount open = new FrmSavingAccount ();
+        FrmAccount open = new FrmAccount ();
         open.setVisible(true);
         this.setVisible (false);
     }//GEN-LAST:event_btnLoginActionPerformed
