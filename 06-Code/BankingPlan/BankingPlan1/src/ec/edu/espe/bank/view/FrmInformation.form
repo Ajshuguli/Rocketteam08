@@ -23,10 +23,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" pref="388" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="537" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -50,12 +50,15 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="jTextArea1">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="99" red="99" type="rgb"/>
+            </Property>
             <Property name="columns" type="int" value="20"/>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="0" red="0" type="rgb"/>
+              <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="                                                       Welcome to Banking Plan&#xa;Banking Plan is  a program that helps to improve the mismanagement of a person&apos;s money&#xa;from the control of their expenses so as to avoid losing money or even going bankrupt.&#xa;&#xa;Banking Plan will contribute to society since it is a system that will help us to administer&#xa;money correctly. The program is a banking simulation where you will know the amount of&#xa;money you have in your account, thus separating it into: Savings Account, Checking Account, , and&#xa;their respective interest generated monthly and annually.&#xa;&#xa;    How to register ?&#xa;&#xa;    )You need to create an id&#xa;    )You need to create a password&#xa;    )Click on register&#xa;&#xa;                                                             Savings Account&#xa;&#xa;To open your account you need to register. &#xa;In this account you can save your money and have it at the time you require&#xa;&#xa;                                                           Checking Account&#xa;&#xa;To open your account you need to register.&#xa;To request this account you need a specific amount of money&#xa;&#xa;&#xa;                                                                     Cdt.&#xa;&#xa;&#xa;"/>
+            <Property name="text" type="java.lang.String" value="                                                       &#xa;&#xa;                                                                  Welcome to Banking Plan&#xa;&#xa;Banking Plan is  a program that helps to improve the mismanagement of a person&apos;s money&#xa;from the control of their expenses so as to avoid losing money or even going bankrupt.&#xa;&#xa;Banking Plan will contribute to society since it is a system that will help us to administer&#xa;money correctly. The program is a banking simulation where you will know the amount of&#xa;money you have in your account, thus separating it into: Savings Account, Checking Account, and&#xa;their respective interest generated monthly and annually.&#xa;&#xa;    How to register ?&#xa;&#xa;   1)  Enter age&#xa;   2)  Enter User Name&#xa;   3)  You need to create an id&#xa;   4)  You need to create a password&#xa;   5)  Click on register&#xa; &#xa;&#xa;     How to enter ?&#xa;&#xa;    1)  Enter User Name&#xa;    2)  Enter your password&#xa;    3)  Click on Loig&#xa;&#xa;   Do you need to cancel  ?&#xa;&#xa;      Click on Cancel&#xa;&#xa;&#xa;  Accounts&#xa;                                                             Savings Account&#xa;&#xa;To open your account you need to register. &#xa;In this account you can save your money and have it at the time you require&#xa;&#xa;                                                           Checking Account&#xa;&#xa;To open your account you need to register.&#xa;To request this account you need a specific amount of money&#xa;&#xa;&#xa;                                                                     Cdt.&#xa;&#xa;To open your account you need to register.&#xa;&#xa;"/>
           </Properties>
         </Component>
       </SubComponents>

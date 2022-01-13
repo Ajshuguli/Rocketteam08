@@ -31,20 +31,21 @@ public class FrmInformation extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTextArea1.setBackground(new java.awt.Color(153, 153, 255));
         jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(0, 0, 255));
+        jTextArea1.setForeground(new java.awt.Color(51, 51, 51));
         jTextArea1.setRows(5);
-        jTextArea1.setText("                                                       Welcome to Banking Plan\nBanking Plan is  a program that helps to improve the mismanagement of a person's money\nfrom the control of their expenses so as to avoid losing money or even going bankrupt.\n\nBanking Plan will contribute to society since it is a system that will help us to administer\nmoney correctly. The program is a banking simulation where you will know the amount of\nmoney you have in your account, thus separating it into: Savings Account, Checking Account, , and\ntheir respective interest generated monthly and annually.\n\n    How to register ?\n\n    )You need to create an id\n    )You need to create a password\n    )Click on register\n\n                                                             Savings Account\n\nTo open your account you need to register. \nIn this account you can save your money and have it at the time you require\n\n                                                           Checking Account\n\nTo open your account you need to register.\nTo request this account you need a specific amount of money\n\n\n                                                                     Cdt.\n\n\n");
+        jTextArea1.setText("                                                       \n\n                                                                  Welcome to Banking Plan\n\nBanking Plan is  a program that helps to improve the mismanagement of a person's money\nfrom the control of their expenses so as to avoid losing money or even going bankrupt.\n\nBanking Plan will contribute to society since it is a system that will help us to administer\nmoney correctly. The program is a banking simulation where you will know the amount of\nmoney you have in your account, thus separating it into: Savings Account, Checking Account, and\ntheir respective interest generated monthly and annually.\n\n    How to register ?\n\n   1)  Enter age\n   2)  Enter User Name\n   3)  You need to create an id\n   4)  You need to create a password\n   5)  Click on register\n \n\n     How to enter ?\n\n    1)  Enter User Name\n    2)  Enter your password\n    3)  Click on Loig\n\n   Do you need to cancel  ?\n\n      Click on Cancel\n\n\n  Accounts\n                                                             Savings Account\n\nTo open your account you need to register. \nIn this account you can save your money and have it at the time you require\n\n                                                           Checking Account\n\nTo open your account you need to register.\nTo request this account you need a specific amount of money\n\n\n                                                                     Cdt.\n\nTo open your account you need to register.\n\n");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
