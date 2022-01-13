@@ -212,18 +212,12 @@ public class FrmMenuBanking extends javax.swing.JFrame {
         FrmAccount abrir = new FrmAccount ();
         abrir.setVisible(true);
         this.setVisible (false);
-         try {
             Document data = new org.bson.Document();
             data.put("Age", txtAge.getText());
             data.put("Password", txtPassword.getText());
             data.put("User", txtNameUser.getText());
             data.put("id", Integer.parseInt(txtId.getText()));
-            Account.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
-        }
+            Account.insertOne(data);     
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
