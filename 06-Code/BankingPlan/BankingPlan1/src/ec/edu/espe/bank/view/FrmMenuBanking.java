@@ -249,10 +249,9 @@ public class FrmMenuBanking extends javax.swing.JFrame {
         FrmAccount abrir = new FrmAccount ();
         abrir.setVisible(true);
         this.setVisible (false);
-<<<<<<< HEAD
+
         try {
-=======
->>>>>>> e1169d1de7196689511f42e0e0354ade2a5bfc1c
+
             Document data = new org.bson.Document();
             data.put("Age", txtAge.getText());
             data.put("Password", txtPassword.getText());
