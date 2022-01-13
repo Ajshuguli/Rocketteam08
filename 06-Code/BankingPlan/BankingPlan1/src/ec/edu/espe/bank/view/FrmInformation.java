@@ -28,6 +28,7 @@ public class FrmInformation extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,25 +39,43 @@ public class FrmInformation extends javax.swing.JFrame {
         jTextArea1.setText("                                                       \n\n                                                                  Welcome to Banking Plan\n\nBanking Plan is  a program that helps to improve the mismanagement of a person's money\nfrom the control of their expenses so as to avoid losing money or even going bankrupt.\n\nBanking Plan will contribute to society since it is a system that will help us to administer\nmoney correctly. The program is a banking simulation where you will know the amount of\nmoney you have in your account, thus separating it into: Savings Account, Checking Account, and\ntheir respective interest generated monthly and annually.\n\n    How to register ?\n\n   1)  Enter age\n   2)  Enter User Name\n   3)  You need to create an id\n   4)  You need to create a password\n   5)  Click on register\n \n\n     How to enter ?\n\n    1)  Enter User Name\n    2)  Enter your password\n    3)  Click on Loig\n\n   Do you need to cancel  ?\n\n      Click on Cancel\n\n\n  Accounts\n                                                             Savings Account\n\nTo open your account you need to register. \nIn this account you can save your money and have it at the time you require\n\n                                                           Checking Account\n\nTo open your account you need to register.\nTo request this account you need a specific amount of money\n\n\n                                                                     Cdt.\n\nTo open your account you need to register.\n\n");
         jScrollPane1.setViewportView(jTextArea1);
 
+        jButton1.setText("Return");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
+                .addGap(5, 5, 5)
+                .addComponent(jButton1))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FrmMenuBanking frmReservation = new FrmMenuBanking ();
+        frmReservation.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,6 +113,7 @@ public class FrmInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
