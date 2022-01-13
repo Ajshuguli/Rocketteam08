@@ -4,6 +4,10 @@ package ec.edu.espe.bank.view;
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.bank.model.Connection;
 import ec.edu.espe.bank.model.FrmAccount;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -16,6 +20,8 @@ import org.bson.Document;
 public class FrmMenuBanking extends javax.swing.JFrame {
         MongoCollection<Document> Account = new Connection().obtenerDB().getCollection("Account");
         MongoCollection<Document> Profile = new Connection().obtenerDB().getCollection("Profile");
+        private ImageIcon image;
+        private Icon icon;
         DefaultTableModel table = new DefaultTableModel(){
         @Override
         public boolean isCellEditable(int row, int column) {
@@ -28,7 +34,9 @@ public class FrmMenuBanking extends javax.swing.JFrame {
      */
     public FrmMenuBanking() {
         initComponents();
- 
+        this.setLocationRelativeTo(this);
+        this.Image(this.lblMenu, "src/Imagenes/si.jpg");
+        
     }
 
     /**
@@ -41,7 +49,6 @@ public class FrmMenuBanking extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -51,221 +58,171 @@ public class FrmMenuBanking extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         txtPassword = new javax.swing.JPasswordField();
-        jButton3 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
+        lblMenu = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         txtGuide = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        txtInformation = new javax.swing.JMenuItem();
 
         jButton1.setText("jButton1");
-
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\II SEMESTRE\\PROYECT\\Rocketteam08\\06-Code\\BankingPlan\\BankingPlan1\\src\\Imagenes\\si.jpg")); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Age :");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 37, -1, -1));
-        getContentPane().add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 34, 90, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
 
+        txtAge.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 150, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Id:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 68, -1, -1));
-        getContentPane().add(txtNameUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 96, 105, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
 
+        txtNameUser.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(txtNameUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 103, 150, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Password:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 150, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
+        btnRegister.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRegister.setForeground(new java.awt.Color(0, 0, 102));
         btnRegister.setText("Register");
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisterActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 254, -1, -1));
+        getContentPane().add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setText("Welcome To Banking Plan");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 11, -1, -1));
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 65, 90, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
 
+        txtId.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 59, 150, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Name User:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 99, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
 
-        jButton4.setText("Cancel");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(0, 0, 102));
+        btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 254, -1, -1));
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 147, 105, -1));
+        getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, -1, -1));
 
-        jButton3.setText("Login");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        txtPassword.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 150, -1));
+
+        btnLogin.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(0, 0, 102));
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 254, -1, -1));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 160, -1, -1));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 160, 57, -1));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 70, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/bank/view/si.jpg"))); // NOI18N
-        jLabel9.setMaximumSize(null);
-        jLabel9.setMinimumSize(null);
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 420));
-
-        jMenuBar1.setMargin(null);
-        jMenuBar1.setMaximumSize(null);
-        jMenuBar1.setMinimumSize(null);
+        lblMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblMenu.setName(""); // NOI18N
+        lblMenu.setOpaque(true);
+        getContentPane().add(lblMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 320));
 
         txtGuide.setText("Guide");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_DOWN_MASK));
-        jMenuItem1.setText("Information ");
-        jMenuItem1.addAncestorListener(new javax.swing.event.AncestorListener() {
+        txtInformation.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        txtInformation.setText("Information ");
+        txtInformation.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jMenuItem1AncestorAdded(evt);
+                txtInformationAncestorAdded(evt);
             }
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        txtInformation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                txtInformationActionPerformed(evt);
             }
         });
-        txtGuide.add(jMenuItem1);
+        txtGuide.add(txtInformation);
 
         jMenuBar1.add(txtGuide);
 
         setJMenuBar(jMenuBar1);
 
-<<<<<<< HEAD
-=======
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(jButton4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btnRegister))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(82, 82, 82)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel5))))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNameUser, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3))))
-                .addGap(0, 79, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtNameUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRegister)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addGap(44, 44, 44))
-        );
-
->>>>>>> e1169d1de7196689511f42e0e0354ade2a5bfc1c
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        FrmInformation frmReservation = new FrmInformation();
-        frmReservation.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItem1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jMenuItem1AncestorAdded
-      
-    }//GEN-LAST:event_jMenuItem1AncestorAdded
-
-    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        try {
-            Document data = new org.bson.Document();
-            data.put("Age", txtAge.getText());
-            data.put("Password", txtPassword.getText());
-            data.put("User", txtNameUser.getText());
-            data.put("id", Integer.parseInt(txtId.getText()));
-            Profile.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
-        }        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnRegisterActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        FrmAccount abrir = new FrmAccount ();
-        abrir.setVisible(true);
-        this.setVisible (false);
-
-        try {
-
-            Document data = new org.bson.Document();
-            data.put("Age", txtAge.getText());
-            data.put("Password", txtPassword.getText());
-            data.put("User", txtNameUser.getText());
-            data.put("id", Integer.parseInt(txtId.getText()));
-            Account.insertOne(data);     
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void Image(JLabel lbl, String ruta){
+        this.image = new ImageIcon(ruta);
+        this.icon = new ImageIcon(this.image.getImage().getScaledInstance(lbl.getWidth(), lbl.getHeight(),Image.SCALE_DEFAULT));
+        lbl.setIcon(this.icon);
+        this.repaint();
+        
+        
+    }
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         txtNameUser.setText("");
         txtId.setText("");
         txtAge.setText("");
         txtPassword.setText("");
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+      try {
+            Document data = new org.bson.Document();
+            data.put("User", txtNameUser.getText());
+            data.put("Id", Integer.parseInt(txtId.getText()));
+            data.put("Age", txtAge.getText());
+            data.put("Password", txtPassword.getText());
+            
+            Profile.insertOne(data);
+            JOptionPane.showMessageDialog(this, "Successful Register");
+
+        } catch (Exception err) {
+            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        }        // TODO add your handling code here:
+    
+    }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        FrmAccount abrir = new FrmAccount ();
+        abrir.setVisible(true);
+        this.setVisible (false);
+<<<<<<< HEAD
+
+        try {
+
+=======
+>>>>>>> aa7dddc9aee455bc5ad8e6354205c7c818773a84
+            Document data = new org.bson.Document();
+            data.put("User", txtNameUser.getText());
+            data.put("Id", Integer.parseInt(txtId.getText()));
+            data.put("Age", txtAge.getText());
+            data.put("Password", txtPassword.getText());
+            Account.insertOne(data);     
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void txtInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInformationActionPerformed
+        FrmInformation frmReservation = new FrmInformation();
+        frmReservation.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_txtInformationActionPerformed
+
+    private void txtInformationAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txtInformationAncestorAdded
+      
+    }//GEN-LAST:event_txtInformationAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -303,24 +260,21 @@ public class FrmMenuBanking extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegister;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JLabel lblMenu;
     private javax.swing.JTextField txtAge;
     private javax.swing.JMenu txtGuide;
     private javax.swing.JTextField txtId;
+    private javax.swing.JMenuItem txtInformation;
     private javax.swing.JTextField txtNameUser;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables

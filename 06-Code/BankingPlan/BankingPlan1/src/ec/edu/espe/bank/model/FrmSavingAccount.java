@@ -86,6 +86,7 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -95,6 +96,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         jLabel4.setText("Account Number:");
 
+        btnOK.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnOK.setForeground(new java.awt.Color(0, 0, 102));
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +105,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnCancel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(0, 0, 102));
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,8 +170,11 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btnDeposit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnDeposit.setForeground(new java.awt.Color(0, 0, 102));
         btnDeposit.setText("Deposit");
         btnDeposit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,6 +182,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnWithdraw.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnWithdraw.setForeground(new java.awt.Color(0, 0, 102));
         btnWithdraw.setText("Withdraw");
         btnWithdraw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +191,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnTransfer.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnTransfer.setForeground(new java.awt.Color(0, 0, 102));
         btnTransfer.setText("Transfer");
         btnTransfer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +200,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnEstInterest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnEstInterest.setForeground(new java.awt.Color(0, 0, 102));
         btnEstInterest.setText("EstimateInterest");
         btnEstInterest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +209,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnReturn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnReturn.setForeground(new java.awt.Color(0, 0, 102));
         btnReturn.setText("Return");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,6 +264,7 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         tblMovements.setModel(new javax.swing.table.DefaultTableModel(
@@ -310,6 +327,7 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -321,6 +339,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         jLabel10.setText("Amount:");
 
+        btnClean.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnClean.setForeground(new java.awt.Color(0, 0, 102));
         btnClean.setText("Clean");
         btnClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

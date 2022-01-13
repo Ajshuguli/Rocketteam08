@@ -15,7 +15,7 @@ import org.bson.Document;
  * @author Camila
  */
 public class FrmCheckingAccount extends javax.swing.JFrame {
-    MongoCollection<Document> Movements = new Connection().obtenerDB().getCollection("SavingAccount");
+    MongoCollection<Document> Movements = new Connection().obtenerDB().getCollection("CheckingAccount");
     DefaultTableModel modelMovs = new DefaultTableModel();
     
     public FrmCheckingAccount() {
@@ -84,7 +84,9 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 255));
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -94,6 +96,8 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
 
         jLabel4.setText("Account Number:");
 
+        btnOK.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnOK.setForeground(new java.awt.Color(0, 0, 102));
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +105,8 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnCancel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(0, 0, 102));
         btnCancel.setText("Cancel");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,8 +170,11 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btnDeposit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnDeposit.setForeground(new java.awt.Color(0, 0, 102));
         btnDeposit.setText("Deposit");
         btnDeposit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +182,8 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnAdvance.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAdvance.setForeground(new java.awt.Color(0, 0, 102));
         btnAdvance.setText("Advance");
         btnAdvance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +191,8 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnTransfer.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnTransfer.setForeground(new java.awt.Color(0, 0, 102));
         btnTransfer.setText("Transfer");
         btnTransfer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +200,8 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
             }
         });
 
+        btnReturn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnReturn.setForeground(new java.awt.Color(0, 0, 102));
         btnReturn.setText("Return");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,21 +217,22 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTransfer))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnTransfer)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(122, 122, 122)
+                        .addComponent(btnAdvance, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jLabel7))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAdvance, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addGap(55, 55, 55)
+                        .addComponent(jLabel7)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,13 +242,14 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDeposit)
                     .addComponent(btnAdvance))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTransfer)
-                    .addComponent(btnReturn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnReturn)
+                    .addComponent(btnTransfer))
+                .addGap(27, 27, 27))
         );
 
+        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         tblMovements.setModel(new javax.swing.table.DefaultTableModel(
@@ -295,6 +312,7 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -306,6 +324,8 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
 
         jLabel10.setText("Amount:");
 
+        btnClean.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnClean.setForeground(new java.awt.Color(0, 0, 102));
         btnClean.setText("Clean");
         btnClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
