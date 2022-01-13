@@ -1,6 +1,6 @@
 
 package ec.edu.espe.bank.model;
-
+import ec.edu.espe.bank.model.FrmSavingAccount;
 /**
  *
  * @author Camila
@@ -204,6 +204,9 @@ public class FrmInterest extends javax.swing.JFrame {
         txtInterestRate.setText("");
         txtAmount.setText("");
         txtInterest.setText("");
+        FrmSavingAccount open = new FrmSavingAccount ();
+        open.setVisible(true);
+        this.setVisible (false);
     }                                         
 
     /**

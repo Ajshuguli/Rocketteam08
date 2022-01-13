@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Management.java</file>
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Saving.java</file>
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Connection.java</file>
@@ -28,6 +29,17 @@
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Profile.java</file>
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManagement.java</file>
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmInformation.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmAccount.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmMenuBanking.java</file>
+            <file>file:/C:/Users/Camila/Desktop/ESPE/II%20SEMESTRE/OPP/CODE/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmCheckingAccount.java</file>
+=======
+            <file>file:/D:/ESPE/SEGUNDO%20SEMESTRE/POO-EDISON/CODIGO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/BankingPlan.java</file>
+            <file>file:/D:/ESPE/SEGUNDO%20SEMESTRE/POO-EDISON/CODIGO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmMenuBanking.java</file>
+            <file>file:/D:/ESPE/SEGUNDO%20SEMESTRE/POO-EDISON/CODIGO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmInformation.java</file>
+>>>>>>> 63760b591dba120a62cb2e7afeee38ff3e508cd1
+>>>>>>> e1169d1de7196689511f42e0e0354ade2a5bfc1c
         </group>
     </open-files>
 </project-private>

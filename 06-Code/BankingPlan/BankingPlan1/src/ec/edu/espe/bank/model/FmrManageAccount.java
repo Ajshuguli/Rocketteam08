@@ -27,6 +27,35 @@ public class FmrManageAccount extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
+        txtSeeChecking = new javax.swing.JButton();
+        txtSeeSavings = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel1.setText("Profit");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(226, 226, 226)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+=======
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -37,15 +66,22 @@ public class FmrManageAccount extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton1.setText("Check Account");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        txtSeeChecking.setText("See Checking");
+        txtSeeChecking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                txtSeeCheckingActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
+        txtSeeSavings.setText("See Savings");
+        txtSeeSavings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSeeSavingsActionPerformed(evt);
+=======
         jButton2.setText("Register Income");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +100,7 @@ public class FmrManageAccount extends javax.swing.JFrame {
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
             }
         });
 
@@ -79,6 +116,17 @@ public class FmrManageAccount extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
+                .addGap(78, 78, 78)
+                .addComponent(txtSeeChecking)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
+                .addComponent(txtSeeSavings)
+                .addGap(124, 124, 124))
+=======
+                .addGap(133, 133, 133)
+>>>>>>> e1169d1de7196689511f42e0e0354ade2a5bfc1c
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(133, 133, 133)
@@ -91,11 +139,20 @@ public class FmrManageAccount extends javax.swing.JFrame {
                         .addGap(151, 151, 151)
                         .addComponent(btnReturn)))
                 .addContainerGap(114, Short.MAX_VALUE))
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtSeeSavings)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(txtSeeChecking, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+=======
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
@@ -128,6 +185,7 @@ public class FmrManageAccount extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -152,6 +210,19 @@ public class FmrManageAccount extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+
+    private void txtSeeCheckingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSeeCheckingActionPerformed
+        FrmCheckingAccount open = new FrmCheckingAccount();
+        open.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_txtSeeCheckingActionPerformed
+
+    private void txtSeeSavingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSeeSavingsActionPerformed
+       FrmSavingAccount open = new FrmSavingAccount();
+        open.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_txtSeeSavingsActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         FmrCheckAccount abrir = new FmrCheckAccount ();
@@ -219,13 +290,18 @@ public class FmrManageAccount extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton btnReturn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+=======
+>>>>>>> e1169d1de7196689511f42e0e0354ade2a5bfc1c
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton txtSeeChecking;
+    private javax.swing.JButton txtSeeSavings;
     // End of variables declaration//GEN-END:variables
 }
