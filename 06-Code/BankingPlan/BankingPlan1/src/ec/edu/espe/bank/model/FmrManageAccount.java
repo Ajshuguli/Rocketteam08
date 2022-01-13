@@ -6,14 +6,14 @@ package ec.edu.espe.bank.model;
 
 /**
  *
- * @author Iván
+ * @author DARK
  */
-public class FrmProfit extends javax.swing.JFrame {
+public class FmrManageAccount extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmManagement
+     * Creates new form FmrManageAccount
      */
-    public FrmProfit() {
+    public FmrManageAccount() {
         initComponents();
     }
 
@@ -26,9 +26,8 @@ public class FrmProfit extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
         txtSeeChecking = new javax.swing.JButton();
         txtSeeSavings = new javax.swing.JButton();
 
@@ -56,6 +55,17 @@ public class FrmProfit extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+=======
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtSeeChecking.setText("See Checking");
@@ -65,10 +75,31 @@ public class FrmProfit extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
         txtSeeSavings.setText("See Savings");
         txtSeeSavings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSeeSavingsActionPerformed(evt);
+=======
+        jButton2.setText("Register Income");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Register Transaction");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Manage Account");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
             }
         });
 
@@ -77,22 +108,65 @@ public class FrmProfit extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
                 .addGap(78, 78, 78)
                 .addComponent(txtSeeChecking)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                 .addComponent(txtSeeSavings)
                 .addGap(124, 124, 124))
+=======
+                .addGap(133, 133, 133)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4)
+                    .addComponent(jButton3)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addContainerGap(114, Short.MAX_VALUE))
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(txtSeeSavings)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(txtSeeChecking, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+=======
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4)
+                .addContainerGap(109, Short.MAX_VALUE))
+        );
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel1.setText("Management");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(125, 125, 125))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -118,6 +192,7 @@ public class FrmProfit extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
     private void txtSeeCheckingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSeeCheckingActionPerformed
         FrmCheckingAccount open = new FrmCheckingAccount();
         open.setVisible(true);
@@ -129,6 +204,31 @@ public class FrmProfit extends javax.swing.JFrame {
         open.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_txtSeeSavingsActionPerformed
+=======
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FmrCheckAccount abrir = new FmrCheckAccount ();
+        abrir.setVisible(true);
+        this.setVisible (false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+>>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FmrRegisterIncome abrir = new FmrRegisterIncome ();
+        abrir.setVisible(true);
+        this.setVisible (false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        FmrRegisterTrasaction abrir = new FmrRegisterTrasaction ();
+        abrir.setVisible(true);
+        this.setVisible (false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        FmrManage abrir = new FmrManage ();
+        abrir.setVisible(true);
+        this.setVisible (false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,21 +247,20 @@ public class FrmProfit extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmProfit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FmrManageAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmProfit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FmrManageAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmProfit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FmrManageAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmProfit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FmrManageAccount.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmProfit().setVisible(true);
+                new FmrManageAccount().setVisible(true);
             }
         });
     }
