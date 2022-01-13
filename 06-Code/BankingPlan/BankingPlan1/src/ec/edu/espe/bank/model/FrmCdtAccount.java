@@ -1,7 +1,6 @@
 package ec.edu.espe.bank.model;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.bank.model.Connection;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
@@ -12,7 +11,7 @@ import org.bson.Document;
  */
 public class FrmCdtAccount extends javax.swing.JFrame {
 
-    MongoCollection<Document> CDTAccount = new Connection().obtenerDB().getCollection("CDTAccounts");
+    MongoCollection<Document> CdtAccount = new Connection().obtenerDB().getCollection("CdtAccounts");
     DefaultTableModel tabla = new DefaultTableModel() {
         @Override
         public boolean isCellEditable(int row, int column) {
@@ -173,8 +172,10 @@ public class FrmCdtAccount extends javax.swing.JFrame {
                                             .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addComponent(txtInvestMonths)
-                                                .addComponent(txtInvestment, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE))
+                                                .addComponent(txtInvestment)
+                                                .addComponent(txtInterest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(txtAmount, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -187,11 +188,8 @@ public class FrmCdtAccount extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(buttonAdd)
                                         .addGap(20, 20, 20)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(txtAmount, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtInterest, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
-                                    .addComponent(ButtonExit, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(87, 87, 87)
+                                .addComponent(ButtonExit)
                                 .addGap(43, 43, 43))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,11 +230,11 @@ public class FrmCdtAccount extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtInterest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(txtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonExit)
                     .addComponent(buttonLogic)
@@ -269,7 +267,7 @@ public class FrmCdtAccount extends javax.swing.JFrame {
             data.put("Generated Interest", txtInterest.getText());
             data.put("Total Amount", txtAmount.getText());
             JOptionPane.showMessageDialog(this, "Successful");
-            CDTAccount.insertOne(data);
+            CdtAccount.insertOne(data);
         } catch (Exception err) {
             JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
         }

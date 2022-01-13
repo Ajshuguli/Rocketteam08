@@ -73,12 +73,14 @@
                                           <Component id="txtUser" min="-2" pref="156" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="txtInvestMonths" max="32767" attributes="0"/>
-                                              <Component id="txtInvestment" pref="156" max="32767" attributes="0"/>
+                                              <Component id="txtInvestment" max="32767" attributes="0"/>
+                                              <Component id="txtInterest" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
                                           </Group>
+                                          <Component id="txtAmount" alignment="1" min="-2" pref="156" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="41" max="32767" attributes="0"/>
+                              <EmptySpace pref="211" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -96,13 +98,8 @@
                                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="txtAmount" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtInterest" alignment="0" pref="156" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="ButtonExit" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                              <Component id="ButtonExit" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -158,12 +155,12 @@
                   <Component id="txtInterest" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtAmount" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAmount" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ButtonExit" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="buttonLogic" alignment="3" min="-2" max="-2" attributes="0"/>
