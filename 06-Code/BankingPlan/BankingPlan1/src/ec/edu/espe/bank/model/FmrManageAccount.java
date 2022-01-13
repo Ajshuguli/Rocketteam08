@@ -192,7 +192,7 @@ public class FmrManageAccount extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmProfit.java
+
     private void txtSeeCheckingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSeeCheckingActionPerformed
         FrmCheckingAccount open = new FrmCheckingAccount();
         open.setVisible(true);
@@ -204,13 +204,12 @@ public class FmrManageAccount extends javax.swing.JFrame {
         open.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_txtSeeSavingsActionPerformed
-=======
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         FmrCheckAccount abrir = new FmrCheckAccount ();
         abrir.setVisible(true);
         this.setVisible (false);
     }//GEN-LAST:event_jButton1ActionPerformed
->>>>>>> 5e779853736f31f22ebe0a2c8d67aee4b187e14f:06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         FmrRegisterIncome abrir = new FmrRegisterIncome ();

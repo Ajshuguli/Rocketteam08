@@ -2,27 +2,23 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrRegisterTrasaction.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Money.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmMenuBanking.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Connection.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmCheckingAccount.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManagement.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManageAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Account.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmSavingAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Management.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Guide.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmMenuBanking.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrCheckAccount.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrRegisterIncome.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrRegisterTrasaction.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmSavingAccount.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Connection.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Guide.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Account.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmCdtAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmAccount.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmInformation.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManagement.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManage.java</file>
         </group>
-=======
-        <group/>
->>>>>>> c172100b74064c8e1436dad0a7b33fabfbf95bc8
     </open-files>
 </project-private>
