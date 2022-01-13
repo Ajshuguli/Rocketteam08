@@ -124,13 +124,15 @@ public class FrmAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       FrmCheckingAccount open = new FrmCheckingAccount();
+        open.setVisible(true);
+        this.setVisible (false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnCdtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCdtActionPerformed
-       FrmCdtAccount open = new FrmCdtAccount();
-        open.setVisible(true);
-        this.setVisible (false);
+//       FrmCdtAccount open = new FrmCdtAccount();
+//        open.setVisible(true);
+//        this.setVisible (false);
     }//GEN-LAST:event_btnCdtActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
