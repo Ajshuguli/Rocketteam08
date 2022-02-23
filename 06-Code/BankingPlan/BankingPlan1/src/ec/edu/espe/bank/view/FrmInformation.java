@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.edu.espe.bank.view;
 
 /**
@@ -34,18 +30,18 @@ public class FrmInformation extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lblId = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        lblGuide = new javax.swing.JLabel();
+        lblUser = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        lblAge = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
@@ -57,12 +53,16 @@ public class FrmInformation extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
+        lblCdt = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        lblSaving = new javax.swing.JLabel();
+        lblChecking = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
+        lblRegister = new javax.swing.JLabel();
         bnReturn = new javax.swing.JButton();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,9 +91,9 @@ public class FrmInformation extends javax.swing.JFrame {
         jLabel8.setText("and their respective interest generated monthly and annually.");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 370, -1));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        jLabel9.setText("How to register ?");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 110, -1));
+        lblId.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        lblId.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ID.PNG"))); // NOI18N
+        jPanel1.add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 260, -1));
 
         jLabel10.setText("   1)  Enter age");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
@@ -110,24 +110,24 @@ public class FrmInformation extends javax.swing.JFrame {
         jLabel14.setText("5)  Click on register");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GUIA.PNG"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 180, 100));
+        lblGuide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/GUIA.PNG"))); // NOI18N
+        lblGuide.setText("jLabel2");
+        jPanel1.add(lblGuide, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 180, 100));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/NAME.PNG"))); // NOI18N
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 260, 20));
+        lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/NAME.PNG"))); // NOI18N
+        jPanel1.add(lblUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 260, 20));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ID.PNG"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SAVING.PNG")));
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, 20));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONTRA.PNG"))); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SAVING.PNG")));
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, 30));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/R.PNG"))); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SAVING.PNG")));
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, -1, 30));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/AGE.PNG"))); // NOI18N
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 240, 20));
+        lblAge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AGE.PNG"))); // NOI18N
+        jPanel1.add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 260, 20));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
         jLabel21.setText("How to enter ?");
@@ -139,7 +139,7 @@ public class FrmInformation extends javax.swing.JFrame {
         jLabel23.setText("2)  Enter your password");
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 610, -1, -1));
 
-        jLabel24.setText("    3)  Click on Loig");
+        jLabel24.setText("    3)  Click on Login");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 650, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
@@ -166,30 +166,46 @@ public class FrmInformation extends javax.swing.JFrame {
         jLabel30.setText("To request this account you need a specific amount of money");
         jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 470, -1, -1));
 
-        jLabel33.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        jLabel33.setText("CDT");
-        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 500, 30, -1));
+        lblCdt.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        lblCdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CDT_1.PNG"))); // NOI18N
+        jPanel1.add(lblCdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 510, 140, -1));
 
         jLabel34.setText("To open your account you need to register.");
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 670, -1, -1));
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 670, -1, -1));
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SAVING.PNG"))); // NOI18N
-        jLabel31.setText("jLabel31");
-        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 210, 110));
+        lblSaving.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SAVING.PNG"))); // NOI18N
+        jPanel1.add(lblSaving, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 210, 110));
 
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CHEC.PNG"))); // NOI18N
-        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 250, 130));
+        lblChecking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CHEC.PNG"))); // NOI18N
+        jPanel1.add(lblChecking, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 250, 130));
 
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/bank/view/CDT.PNG"))); // NOI18N
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SAVING.PNG")));
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 140, -1));
 
+        lblPassword.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        lblPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CONTRA.PNG"))); // NOI18N
+        jPanel1.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 260, -1));
+
+        lblRegister.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/R.PNG"))); // NOI18N
+        jPanel1.add(lblRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 100, 30));
+
+        bnReturn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         bnReturn.setText("Return");
         bnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnReturnActionPerformed(evt);
             }
         });
-        jPanel1.add(bnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 680, -1, -1));
+        jPanel1.add(bnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 650, 120, -1));
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jLabel38.setText("How to register ?");
+        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 110, -1));
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jLabel39.setText("CDT");
+        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 30, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,9 +215,9 @@ public class FrmInformation extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -256,13 +272,10 @@ public class FrmInformation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -274,17 +287,24 @@ public class FrmInformation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblCdt;
+    private javax.swing.JLabel lblChecking;
+    private javax.swing.JLabel lblGuide;
+    private javax.swing.JLabel lblId;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblRegister;
+    private javax.swing.JLabel lblSaving;
+    private javax.swing.JLabel lblUser;
     // End of variables declaration//GEN-END:variables
 }
