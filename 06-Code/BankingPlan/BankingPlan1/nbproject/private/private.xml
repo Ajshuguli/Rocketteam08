@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-<<<<<<< HEAD
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/BankingPlan.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmMenuBanking.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/utils/FileManager.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmCheckingAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManagement.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrRegisterTrasaction.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrRegisterIncome.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Saving.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Checking.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmInterest.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmSavingAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Connection.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Cdt.java</file>
             <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmInformation.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmManageAccount.java</file>
+            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrManage.java</file>
         </group>
     </open-files>
-=======
-<<<<<<< HEAD
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmCheckingAccount.java</file>
-            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmInformation.java</file>
-            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FrmCdtAccount.java</file>
-            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/FmrCheckAccount.java</file>
-            <file>file:/C:/Users/Iván/Desktop/ANDREA/SEGUNDO%20SEMESTRE/POO/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmMenuBanking.java</file>
-        </group>
-    </open-files>
-=======
->>>>>>> 73bbeaf931a1ba29da8724b6a943cb28db19470d
->>>>>>> 613e494234bbe6b586c7e3333df8d4090a414690
 </project-private>
