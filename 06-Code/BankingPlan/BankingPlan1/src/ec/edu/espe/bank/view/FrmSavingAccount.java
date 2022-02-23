@@ -1,25 +1,36 @@
-
-package ec.edu.espe.bank.model;
+package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.bank.model.FrmAccount;
+import ec.edu.espe.bank.model.Movement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
-
+import utils.Connection;
 
 /**
  *
  * @author Camila
  */
 public class FrmSavingAccount extends javax.swing.JFrame {
+
     MongoCollection<Document> Movements = new Connection().obtenerDB().getCollection("SavingAccount");
     DefaultTableModel modelMovs = new DefaultTableModel();
-    
+
     public FrmSavingAccount() {
         initComponents();
+        btnOK.setEnabled(false);
+        btnCancel.setEnabled(false);
+        btnDeposit.setEnabled(false);
+        btnWithdraw.setEnabled(false);
+        btnTransfer.setEnabled(false);
+        btnClean.setEnabled(false);
+        lblInfBalance.setEnabled(false);
+        txtNameAccountHolder.setEnabled(false);
+        txtAccountNumberHolder.setEnabled(false);
+        txtAmount.setEnabled(false);
+
         modelMovs.addColumn("Name");
         modelMovs.addColumn("Account");
         modelMovs.addColumn("Date");
@@ -51,7 +62,9 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
         txtAccountNumber = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
+        lblInfBalance = new javax.swing.JLabel();
         txtBalance = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnDeposit = new javax.swing.JButton();
         btnWithdraw = new javax.swing.JButton();
@@ -74,6 +87,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         txtAmount = new javax.swing.JTextField();
         btnClean = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        lblInfAmount = new javax.swing.JLabel();
 
         jButton6.setText("jButton6");
 
@@ -92,6 +107,15 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setText("Saving Account");
 
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNameKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
+
         jLabel3.setText("Name User:");
 
         jLabel4.setText("Account Number:");
@@ -107,15 +131,39 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnCancel.setForeground(new java.awt.Color(0, 0, 102));
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Clean");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
 
+        txtAccountNumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtAccountNumberKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAccountNumberKeyTyped(evt);
+            }
+        });
+
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel13.setText("Balance:");
+
+        lblInfBalance.setForeground(new java.awt.Color(255, 0, 0));
+
+        txtBalance.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtBalanceKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtBalanceKeyTyped(evt);
+            }
+        });
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel15.setText("*");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -124,11 +172,6 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(247, 247, 247)
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
@@ -136,17 +179,28 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(285, 285, 285)
                         .addComponent(jLabel2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(291, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel13)
-                .addGap(18, 18, 18)
-                .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnOK)
-                .addGap(44, 44, 44)
-                .addComponent(btnCancel)
-                .addGap(24, 24, 24))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblInfBalance)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnOK)
+                        .addGap(44, 44, 44)
+                        .addComponent(btnCancel)
+                        .addGap(24, 24, 24))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +220,9 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                     .addComponent(btnOK)
                     .addComponent(btnCancel)
                     .addComponent(jLabel13)
-                    .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInfBalance)
+                    .addComponent(jLabel15))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -203,6 +259,11 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         btnEstInterest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnEstInterest.setForeground(new java.awt.Color(0, 0, 102));
         btnEstInterest.setText("EstimateInterest");
+        btnEstInterest.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEstInterestMouseClicked(evt);
+            }
+        });
         btnEstInterest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEstInterestActionPerformed(evt);
@@ -297,6 +358,7 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         });
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 153, 0));
         jLabel14.setText("Available Balance:");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -335,9 +397,27 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         jLabel8.setText("Name of the account holder:");
 
+        txtNameAccountHolder.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameAccountHolderKeyTyped(evt);
+            }
+        });
+
         jLabel9.setText("Account Number:");
 
+        txtAccountNumberHolder.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAccountNumberHolderKeyTyped(evt);
+            }
+        });
+
         jLabel10.setText("Amount:");
+
+        txtAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAmountKeyTyped(evt);
+            }
+        });
 
         btnClean.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnClean.setForeground(new java.awt.Color(0, 0, 102));
@@ -348,6 +428,12 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             }
         });
 
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel16.setText("*");
+
+        lblInfAmount.setForeground(new java.awt.Color(255, 0, 0));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -357,7 +443,7 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(0, 84, Short.MAX_VALUE))
+                        .addGap(0, 97, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
@@ -370,7 +456,13 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(txtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)))
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel16)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lblInfAmount)
+                                        .addGap(0, 0, Short.MAX_VALUE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnClean)))
                 .addContainerGap())
@@ -393,7 +485,9 @@ public class FrmSavingAccount extends javax.swing.JFrame {
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
                     .addComponent(txtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnClean))
+                    .addComponent(btnClean)
+                    .addComponent(jLabel16)
+                    .addComponent(lblInfAmount))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -432,11 +526,19 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public void enableFirstButtons() {
+        if (!txtName.getText().isEmpty() && !txtBalance.getText().isEmpty() && !txtAccountNumber.getText().isEmpty()) {
+            btnOK.setEnabled(true);
+            btnCancel.setEnabled(true);
+        } else {
+            btnOK.setEnabled(false);
+            btnCancel.setEnabled(false);
+        }
+    }
     private void btnEstInterestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstInterestActionPerformed
-        FrmInterest open = new FrmInterest ();
+        FrmEstimateInterest open = new FrmEstimateInterest();
         open.setVisible(true);
-        this.setVisible (false);
+
     }//GEN-LAST:event_btnEstInterestActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -449,32 +551,36 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         txtNameAccountHolder.getText();
         txtAccountNumberHolder.getText();
         txtAmount.getText();
-        
+
+        txtNameAccountHolder.setText("");
+        txtAccountNumberHolder.setText("");
+        txtAmount.setText("");
+
         Movement movement = new Movement();
         movement.setDateMovement(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
         movement.setDeposit(btnDeposit.getText());
-        
+
         double balance;
         double availableBalance;
-        
-        balance= Double.parseDouble(txtBalance.getText());
+
+        balance = Double.parseDouble(txtBalance.getText());
         double amount = Double.parseDouble(txtAmount.getText());
-        
-        availableBalance = balance+amount;
-        txtAvailableBalance.setText(String.valueOf(availableBalance));  
-        
-        Object mov[]= new Object[5];
-        mov[0]=txtNameAccountHolder.getText();
-        mov[1]=txtAccountNumberHolder.getText();
-        mov[2]= movement.getDateMovement();
-        mov[3]=btnDeposit.getText();
-        mov[4]=txtAmount.getText();
+
+        availableBalance = balance + amount;
+        txtAvailableBalance.setText(String.valueOf(availableBalance));
+
+        Object mov[] = new Object[5];
+        mov[0] = txtNameAccountHolder.getText();
+        mov[1] = txtAccountNumberHolder.getText();
+        mov[2] = movement.getDateMovement();
+        mov[3] = btnDeposit.getText();
+        mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
-        
-         try {
+
+        try {
             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
-            data.put("Account Number",txtAccountNumberHolder.getText());
+            data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnDeposit.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
@@ -482,10 +588,28 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         } catch (Exception err) {
             JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
-        }       
+        }
     }//GEN-LAST:event_btnDepositActionPerformed
- 
+
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
+        JOptionPane.showMessageDialog(this, "Enter data to perform some type of movement");
+        btnClean.setEnabled(true);
+        btnDeposit.setEnabled(true);
+        btnWithdraw.setEnabled(true);
+        btnTransfer.setEnabled(true);
+        btnClean.setEnabled(true);
+        txtNameAccountHolder.setEnabled(true);
+        txtAccountNumberHolder.setEnabled(true);
+        txtAmount.setEnabled(true);
+
+        txtName.setEnabled(false);
+        txtBalance.setEnabled(false);
+        txtAccountNumber.setEnabled(false);
+
+        btnOK.setEnabled(false);
+        btnCancel.setEnabled(false);
+        lblInfBalance.setText("");
+
 
     }//GEN-LAST:event_btnOKActionPerformed
 
@@ -499,32 +623,36 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         txtNameAccountHolder.getText();
         txtAccountNumberHolder.getText();
         txtAmount.getText();
-        
+
+        txtNameAccountHolder.setText("");
+        txtAccountNumberHolder.setText("");
+        txtAmount.setText("");
+
         Movement movement = new Movement();
         movement.setDateMovement(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
         movement.setWithdraw(btnWithdraw.getText());
-        
+
         double balance;
         double availableBalance;
-        
-        balance= Double.parseDouble(txtBalance.getText());
+
+        balance = Double.parseDouble(txtBalance.getText());
         double amount = Double.parseDouble(txtAmount.getText());
-        
-        availableBalance = balance-amount;
-        txtAvailableBalance.setText(String.valueOf(availableBalance)); 
-        
-        Object mov[]= new Object[5];
-        mov[0]=txtNameAccountHolder.getText();
-        mov[1]=txtAccountNumberHolder.getText();
-        mov[2]= movement.getDateMovement();
-        mov[3]=btnWithdraw.getText();
-        mov[4]=txtAmount.getText();
+
+        availableBalance = balance - amount;
+        txtAvailableBalance.setText(String.valueOf(availableBalance));
+
+        Object mov[] = new Object[5];
+        mov[0] = txtNameAccountHolder.getText();
+        mov[1] = txtAccountNumberHolder.getText();
+        mov[2] = movement.getDateMovement();
+        mov[3] = btnWithdraw.getText();
+        mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
-        
+
         try {
             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
-            data.put("Account Number",txtAccountNumberHolder.getText());
+            data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnWithdraw.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
@@ -532,39 +660,43 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         } catch (Exception err) {
             JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
-        }   
+        }
     }//GEN-LAST:event_btnWithdrawActionPerformed
 
     private void btnTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferActionPerformed
         txtNameAccountHolder.getText();
         txtAccountNumberHolder.getText();
         txtAmount.getText();
-        
+
+        txtNameAccountHolder.setText("");
+        txtAccountNumberHolder.setText("");
+        txtAmount.setText("");
+
         Movement movement = new Movement();
         movement.setDateMovement(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
         movement.setTransfer(btnTransfer.getText());
-        
+
         double balance;
         double availableBalance;
-        
-        balance= Double.parseDouble(txtBalance.getText());
+
+        balance = Double.parseDouble(txtBalance.getText());
         double amount = Double.parseDouble(txtAmount.getText());
-        
-        availableBalance = balance-amount;
-        txtAvailableBalance.setText(String.valueOf(availableBalance)); 
-        
-        Object mov[]= new Object[5];
-        mov[0]=txtNameAccountHolder.getText();
-        mov[1]=txtAccountNumberHolder.getText();
-        mov[2]= movement.getDateMovement();
-        mov[3]=btnTransfer.getText();
-        mov[4]=txtAmount.getText();
+
+        availableBalance = balance - amount;
+        txtAvailableBalance.setText(String.valueOf(availableBalance));
+
+        Object mov[] = new Object[5];
+        mov[0] = txtNameAccountHolder.getText();
+        mov[1] = txtAccountNumberHolder.getText();
+        mov[2] = movement.getDateMovement();
+        mov[3] = btnTransfer.getText();
+        mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
-        
+
         try {
             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
-            data.put("Account Number",txtAccountNumberHolder.getText());
+            data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnTransfer.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
@@ -572,20 +704,98 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         } catch (Exception err) {
             JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
-        }   
+        }
     }//GEN-LAST:event_btnTransferActionPerformed
 
     private void txtAvailableBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAvailableBalanceActionPerformed
-   
+
     }//GEN-LAST:event_txtAvailableBalanceActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmAccount open = new FrmAccount();
         open.setVisible(true);
         this.setVisible(false);
-       
+
     }//GEN-LAST:event_btnReturnActionPerformed
-    
+
+    private void txtNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyReleased
+        enableFirstButtons();
+    }//GEN-LAST:event_txtNameKeyReleased
+
+    private void txtBalanceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBalanceKeyReleased
+        enableFirstButtons();
+
+    }//GEN-LAST:event_txtBalanceKeyReleased
+
+    private void txtAccountNumberKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAccountNumberKeyReleased
+        enableFirstButtons();
+    }//GEN-LAST:event_txtAccountNumberKeyReleased
+
+    private void txtAccountNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAccountNumberKeyTyped
+        char numbers = evt.getKeyChar();
+        if (numbers < '0' || numbers > '9') {
+            evt.consume();
+        }
+
+        if (txtAccountNumber.getText().length() >= 10) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, The account number only has 10 digits");
+            txtAccountNumber.setText("");
+        }
+    }//GEN-LAST:event_txtAccountNumberKeyTyped
+
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        char letters = evt.getKeyChar();
+        if ((letters < 'a' || letters > 'z') && (letters < 'A' || letters > 'Z')) {
+            evt.consume();
+        }
+        if (txtName.getText().length() >= 15) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, Should not be a very long name");
+            txtName.setText("");
+        }
+    }//GEN-LAST:event_txtNameKeyTyped
+
+    private void txtBalanceKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBalanceKeyTyped
+        lblInfBalance.setText("Use the point for tenths");
+    }//GEN-LAST:event_txtBalanceKeyTyped
+
+    private void txtNameAccountHolderKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameAccountHolderKeyTyped
+        char letters = evt.getKeyChar();
+        if ((letters < 'a' || letters > 'z') && (letters < 'A' || letters > 'Z')) {
+            evt.consume();
+        }
+        if (txtNameAccountHolder.getText().length() >= 15) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, Should not be a very long name");
+            txtNameAccountHolder.setText("");
+        }
+    }//GEN-LAST:event_txtNameAccountHolderKeyTyped
+
+    private void txtAccountNumberHolderKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAccountNumberHolderKeyTyped
+        char numbers = evt.getKeyChar();
+        if (numbers < '0' || numbers > '9') {
+            evt.consume();
+        }
+
+        if (txtAccountNumberHolder.getText().length() >= 10) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, The account number only has 10 digits");
+            txtAccountNumberHolder.setText("");
+        }
+    }//GEN-LAST:event_txtAccountNumberHolderKeyTyped
+
+    private void txtAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAmountKeyTyped
+        lblInfAmount.setText("Use the point for tenths");
+    }//GEN-LAST:event_txtAmountKeyTyped
+
+    private void btnEstInterestMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEstInterestMouseClicked
+        FrmEstimateInterest open = new FrmEstimateInterest();
+        open.setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_btnEstInterestMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -637,6 +847,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -651,6 +863,8 @@ public class FrmSavingAccount extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblInfAmount;
+    private javax.swing.JLabel lblInfBalance;
     private javax.swing.JTable tblMovements;
     private javax.swing.JTextField txtAccountNumber;
     private javax.swing.JTextField txtAccountNumberHolder;
