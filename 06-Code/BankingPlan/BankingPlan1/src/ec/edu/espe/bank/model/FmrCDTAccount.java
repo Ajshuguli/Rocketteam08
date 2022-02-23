@@ -2,6 +2,7 @@ package ec.edu.espe.bank.model;
 
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.bank.model.Connection;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
@@ -39,33 +40,98 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
-        txtUser = new javax.swing.JTextField();
-        ButtonExit = new javax.swing.JButton();
-        buttonLogic = new javax.swing.JButton();
-        buttonAdd = new javax.swing.JButton();
+        txtName = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtInvestment = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         investYears = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnCalculate = new javax.swing.JButton();
+        ButtonExit = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        txtAmount = new javax.swing.JTextField();
         txtInterest = new javax.swing.JTextField();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        jLabel7 = new javax.swing.JLabel();
+        lblErrorCedula = new javax.swing.JLabel();
+        lblErrorName = new javax.swing.JLabel();
+        btnClear = new javax.swing.JButton();
+        lblErrorInvestment = new javax.swing.JLabel();
+        lblErrorInterest = new javax.swing.JLabel();
+        lblErrorAmount = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 51, 102));
+        setForeground(new java.awt.Color(102, 255, 102));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
         jLabel1.setText("CDT Account");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 7, 163, 68));
 
         jLabel2.setText("ID");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 96, -1, -1));
 
         jLabel3.setText("Name");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 149, -1, -1));
 
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
+            }
+        });
+        txtId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIdKeyTyped(evt);
+            }
+        });
+        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 93, 156, -1));
+
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNameKeyTyped(evt);
+            }
+        });
+        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 146, 156, -1));
+
+        jLabel4.setText("How much do you want to invest?");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 202, -1, -1));
+
+        txtInvestment.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInvestmentKeyTyped(evt);
+            }
+        });
+        getContentPane().add(txtInvestment, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 202, 156, -1));
+
+        jLabel5.setText("Select how Many years do you want to invest");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 261, -1, -1));
+
+        investYears.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 ", "4", "5", "6" }));
+        investYears.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                investYearsActionPerformed(evt);
+            }
+        });
+        getContentPane().add(investYears, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 258, 156, -1));
+
+        jLabel6.setText("Interest you will generate");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 309, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setToolTipText("");
+
+        btnCalculate.setText("Calculate Interest");
+        btnCalculate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalculateActionPerformed(evt);
             }
         });
 
@@ -76,126 +142,122 @@ public class FmrCDTAccount extends javax.swing.JFrame {
             }
         });
 
-        buttonLogic.setText("Login");
-        buttonLogic.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setText("Add");
+        btnAdd.setEnabled(false);
+        btnAdd.setFocusCycleRoot(true);
+        btnAdd.setFocusPainted(false);
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLogicActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
-        buttonAdd.setText("Add");
-        buttonAdd.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setText("Return");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAddActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("How much do you want to invest?");
+        jLabel8.setText("Amount");
 
-        jLabel5.setText("Select how Many years do you want to invest");
-
-        investYears.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 ", "4", "5", "6" }));
-        investYears.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                investYearsActionPerformed(evt);
+        txtAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAmountKeyTyped(evt);
             }
         });
-
-        jLabel6.setText("Interest you will generate");
 
         txtInterest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInterestActionPerformed(evt);
             }
         });
+        txtInterest.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtInterestKeyTyped(evt);
+            }
+        });
 
-        jMenu1.setText("Current Account");
-        jMenuBar1.add(jMenu1);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cdtImagen.png"))); // NOI18N
 
-        jMenu2.setText("Ckecking Account");
-        jMenuBar1.add(jMenu2);
+        btnClear.setText("Clear");
+        btnClear.setEnabled(false);
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
 
-        jMenu3.setText("Cdt Account");
-        jMenuBar1.add(jMenu3);
-
-        setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(buttonLogic))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(buttonAdd)
-                        .addGap(75, 75, 75)
-                        .addComponent(ButtonExit))
-                    .addComponent(investYears, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(154, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(66, 66, 66)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(63, 63, 63)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtInvestment, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(112, 112, 112)
-                        .addComponent(txtInterest, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(152, 152, 152)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtInterest, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                    .addComponent(txtAmount))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(btnAdd)
+                            .addGap(64, 64, 64)
+                            .addComponent(btnClear))
+                        .addComponent(lblErrorCedula, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblErrorName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblErrorInvestment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblErrorAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                    .addComponent(lblErrorInterest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(56, 56, 56)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(btnReturn)
+                .addGap(67, 67, 67)
+                .addComponent(btnCalculate)
+                .addGap(340, 340, 340)
+                .addComponent(ButtonExit)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtInvestment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(investYears, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtInterest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(lblErrorCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(lblErrorName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(lblErrorInvestment, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblErrorInterest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtInterest))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(txtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblErrorAmount))
+                        .addGap(68, 68, 68)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate)
                     .addComponent(ButtonExit)
-                    .addComponent(buttonLogic)
-                    .addComponent(buttonAdd))
-                .addGap(33, 33, 33))
+                    .addComponent(btnAdd)
+                    .addComponent(btnReturn)
+                    .addComponent(btnClear))
+                .addGap(37, 37, 37))
         );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -208,12 +270,12 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_ButtonExitActionPerformed
 
-    private void buttonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         try {
             Document data = new Document();
 
             data.put("id", Integer.parseInt(txtId.getText()));
-            data.put("User", txtUser.getText());
+            data.put("User", txtName.getText());
             data.put("Investment", Float.parseFloat(txtInvestment.getText()));
             data.put("YearsOfInvestment", investYears.getSelectedItem().hashCode());
 
@@ -222,11 +284,13 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         } catch (Exception err) {
             JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
         }
-    }//GEN-LAST:event_buttonAddActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
-    private void buttonLogicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogicActionPerformed
-        JOptionPane.showMessageDialog(this, "Successful", "Successful!", JOptionPane.QUESTION_MESSAGE);
-    }//GEN-LAST:event_buttonLogicActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        FrmAccount open = new FrmAccount();
+        open.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     private void investYearsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_investYearsActionPerformed
         // TODO add your handling code here:
@@ -235,6 +299,147 @@ public class FmrCDTAccount extends javax.swing.JFrame {
     private void txtInterestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInterestActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtInterestActionPerformed
+
+    private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
+        Double capital, reason, time, interest, amount;
+
+        capital = Double.parseDouble(txtInvestment.getText());
+        time = Double.parseDouble(investYears.getSelectedItem().toString());
+        reason = 0.12D;
+
+        amount = Math.pow(1 + reason, time) * capital;
+        interest = amount - capital;
+
+        txtInterest.setText(Double.toString(Math.round(interest)));
+        txtAmount.setText(Double.toString(Math.round(amount)));
+    }//GEN-LAST:event_btnCalculateActionPerformed
+
+    private void txtIdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyTyped
+        int key = evt.getKeyChar();
+        boolean numbers = (key >= 48 && key <= 57);
+        boolean supr = (key == 8);
+
+        if (numbers || supr) {
+            lblErrorCedula.setForeground(new Color(102, 255, 255));
+            lblErrorCedula.setText("Correct Format");
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill only with numbers from 0 to 9");
+            lblErrorCedula.setForeground(new Color(255, 0, 0));
+            lblErrorCedula.setText("Error. Enter only numbers");
+            evt.consume();
+        }
+        habilyInsert();
+        habilyClean();
+    }//GEN-LAST:event_txtIdKeyTyped
+
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
+
+    private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
+        int key = evt.getKeyChar();
+        boolean uper = (key >= 65 && key <= 90);
+        boolean lower = (key >= 97 && key <= 122);
+        boolean espace = (key == 32);
+        boolean supr = (key == 8);
+
+        if ((uper || lower || espace || supr)) {
+            lblErrorName.setForeground(new Color(102, 255, 255));
+            lblErrorName.setText("Correct Format");
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill only with uppercase and lowercase letters");
+            lblErrorName.setForeground(new Color(255, 0, 0));
+            lblErrorName.setText("Error. Enter only letters");
+            evt.consume();
+        }
+        habilyInsert();
+        habilyClean();
+    }//GEN-LAST:event_txtNameKeyTyped
+
+    private void txtInvestmentKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInvestmentKeyTyped
+        double key = evt.getKeyChar();
+        boolean numbers = (key >= 48 && key <= 57);
+        boolean dat = (key == 46);
+        boolean supr = (key == 8);
+
+        if (numbers || dat || supr) {
+            lblErrorInvestment.setForeground(new Color(102, 255, 255));
+            lblErrorInvestment.setText("Correct Format");
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill with decimals and the operator '.'");
+            lblErrorInvestment.setForeground(new Color(255, 0, 0));
+            lblErrorInvestment.setText("Error. Enter only float numbers");
+            evt.consume();
+        }
+        habilyInsert();
+        habilyClean();
+    }//GEN-LAST:event_txtInvestmentKeyTyped
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        clearFields();
+    }//GEN-LAST:event_btnClearActionPerformed
+
+    private void txtInterestKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInterestKeyTyped
+        double key = evt.getKeyChar();
+        boolean numbers = (key >= 48 && key <= 57);
+        boolean dat = (key == 46);
+        boolean supr = (key == 8);
+
+        if (numbers || dat || supr) {
+            lblErrorInterest.setForeground(new Color(102, 255, 255));
+            lblErrorInterest.setText("Correct Format");
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill with decimals and the operator '.'");
+            lblErrorInterest.setForeground(new Color(255, 0, 0));
+            lblErrorInterest.setText("Error. Enter only float numbers");
+            evt.consume();
+        }
+        habilyInsert();
+        habilyClean();
+    }//GEN-LAST:event_txtInterestKeyTyped
+
+    private void txtAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAmountKeyTyped
+        double key = evt.getKeyChar();
+        boolean numbers = (key >= 48 && key <= 57);
+        boolean dat = (key == 46);
+        boolean supr = (key == 8);
+
+        if (numbers || dat || supr) {
+            lblErrorAmount.setForeground(new Color(102, 255, 255));
+            lblErrorAmount.setText("Correct Format");
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill with decimals and the operator '.'");
+            lblErrorAmount.setForeground(new Color(255, 0, 0));
+            lblErrorAmount.setText("Error. Enter only float numbers");
+            evt.consume();
+        }
+        habilyInsert();
+        habilyClean();
+    }//GEN-LAST:event_txtAmountKeyTyped
+    public void habilyInsert() {
+        if (!txtId.getText().isEmpty() && !txtName.getText().isEmpty() && !txtInvestment.getText().isEmpty()
+                && !txtInterest.getText().isEmpty() && !txtAmount.getText().isEmpty()) {
+            btnAdd.setEnabled(true);
+        } else {
+            btnAdd.setEnabled(false);
+        }
+    }
+
+    public void habilyClean() {
+        if (!txtId.getText().isEmpty() && !txtName.getText().isEmpty() && !txtInvestment.getText().isEmpty()) {
+            btnClear.setEnabled(true);
+        } else {
+            btnClear.setEnabled(false);
+        }
+    }
+
+    public void clearFields() {
+        txtId.setText("");
+        txtName.setText("");
+        txtInvestment.setText("");
+        txtInterest.setText("");
+        txtAmount.setText("");
+    }
 
     /**
      * @param args the command line arguments
@@ -280,8 +485,10 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonExit;
-    private javax.swing.JButton buttonAdd;
-    private javax.swing.JButton buttonLogic;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnCalculate;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnReturn;
     private javax.swing.JComboBox<String> investYears;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -289,13 +496,18 @@ public class FmrCDTAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblErrorAmount;
+    private javax.swing.JLabel lblErrorCedula;
+    private javax.swing.JLabel lblErrorInterest;
+    private javax.swing.JLabel lblErrorInvestment;
+    private javax.swing.JLabel lblErrorName;
+    private javax.swing.JTextField txtAmount;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtInterest;
     private javax.swing.JTextField txtInvestment;
-    private javax.swing.JTextField txtUser;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }
