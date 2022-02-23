@@ -73,8 +73,8 @@ public class FrmInformation extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        FrmMenuBanking frmReservation = new FrmMenuBanking ();
-        frmReservation.setVisible(true);
+         FrmAccount open = new FrmAccount ();
+        open.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnReturnActionPerformed
 

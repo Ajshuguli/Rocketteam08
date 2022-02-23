@@ -1,13 +1,14 @@
 
-package ec.edu.espe.bank.model;
+package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.bank.model.FrmAccount;
+import ec.edu.espe.bank.model.Movement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
+import utils.Connection;
 
 
 /**

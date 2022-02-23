@@ -1,4 +1,4 @@
-package ec.edu.espe.bank.model;
+package utils;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClient;
