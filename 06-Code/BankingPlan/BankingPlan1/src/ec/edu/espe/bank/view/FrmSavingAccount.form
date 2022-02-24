@@ -234,6 +234,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtAccountNumber">
           <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAccountNumberActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAccountNumberKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAccountNumberKeyTyped"/>
           </Events>
@@ -255,6 +256,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtBalance">
           <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBalanceActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtBalanceKeyReleased"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtBalanceKeyTyped"/>
           </Events>
@@ -640,6 +642,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtNameAccountHolder">
           <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNameAccountHolderActionPerformed"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNameAccountHolderKeyTyped"/>
           </Events>
         </Component>
@@ -650,6 +653,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtAccountNumberHolder">
           <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAccountNumberHolderActionPerformed"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAccountNumberHolderKeyTyped"/>
           </Events>
         </Component>

@@ -8,6 +8,12 @@ import java.util.ArrayList;
  */
 public class Checking {
 
+    public float Totalbalance(float deposist, float advance, float transfer) {
+        
+        float balance;
+        balance = deposist - (advance + transfer);
+        return balance;
+    }
     private String accountNumber;
     private ArrayList<Money> money;
     private ArrayList<Profit> profits;
@@ -16,11 +22,6 @@ public class Checking {
         this.accountNumber = accountNumber;
         this.money = money;
         this.profits = profits;
-    }
-
-    @Override
-    public String toString() {
-        return "Checking{" + "accountNumber=" + accountNumber + ", money=" + money + ", profits=" + profits + '}';
     }
 
     public float deposit() {
@@ -76,5 +77,4 @@ public class Checking {
     public void setProfits(ArrayList<Profit> profits) {
         this.profits = profits;
     }
-
 }

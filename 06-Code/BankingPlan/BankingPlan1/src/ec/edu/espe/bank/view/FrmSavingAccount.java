@@ -138,6 +138,11 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             }
         });
 
+        txtAccountNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAccountNumberActionPerformed(evt);
+            }
+        });
         txtAccountNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAccountNumberKeyReleased(evt);
@@ -152,6 +157,11 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         lblInfBalance.setForeground(new java.awt.Color(255, 0, 0));
 
+        txtBalance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBalanceActionPerformed(evt);
+            }
+        });
         txtBalance.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBalanceKeyReleased(evt);
@@ -397,6 +407,11 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         jLabel8.setText("Name of the account holder:");
 
+        txtNameAccountHolder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameAccountHolderActionPerformed(evt);
+            }
+        });
         txtNameAccountHolder.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNameAccountHolderKeyTyped(evt);
@@ -405,6 +420,11 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
         jLabel9.setText("Account Number:");
 
+        txtAccountNumberHolder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAccountNumberHolderActionPerformed(evt);
+            }
+        });
         txtAccountNumberHolder.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAccountNumberHolderKeyTyped(evt);
@@ -783,6 +803,22 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_btnEstInterestMouseClicked
+
+    private void txtBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBalanceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBalanceActionPerformed
+
+    private void txtAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAccountNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAccountNumberActionPerformed
+
+    private void txtNameAccountHolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameAccountHolderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameAccountHolderActionPerformed
+
+    private void txtAccountNumberHolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAccountNumberHolderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAccountNumberHolderActionPerformed
 
     /**
      * @param args the command line arguments
