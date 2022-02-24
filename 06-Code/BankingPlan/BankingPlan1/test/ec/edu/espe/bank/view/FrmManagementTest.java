@@ -6,13 +6,13 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Alan Shuguli , DEEE-ESPE
+ * @author Alan S
  */
 public class FrmManagementTest {
     
     public FrmManagementTest() {
     }
-
+    
     /**
      * Test of add method, of class FrmManagement.
      */
@@ -40,4 +40,6 @@ public class FrmManagementTest {
         float result = (float) Double.sum(addend1, addend2);
         assertEquals(expResult, result, 0.001);
     }
+
+     
 }

@@ -15,13 +15,10 @@ public class Checking {
         return balance;
     }
     private String accountNumber;
-    private ArrayList<Money> money;
-    private ArrayList<Profit> profits;
-
-    public Checking(String accountNumber, ArrayList<Money> money, ArrayList<Profit> profits) {
+    
+    public Checking(String accountNumber  ) {
         this.accountNumber = accountNumber;
-        this.money = money;
-        this.profits = profits;
+        
     }
 
     public float deposit() {
@@ -48,33 +45,5 @@ public class Checking {
      */
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
-    }
-
-    /**
-     * @return the money
-     */
-    public ArrayList<Money> getMoney() {
-        return money;
-    }
-
-    /**
-     * @param money the money to set
-     */
-    public void setMoney(ArrayList<Money> money) {
-        this.money = money;
-    }
-
-    /**
-     * @return the profits
-     */
-    public ArrayList<Profit> getProfits() {
-        return profits;
-    }
-
-    /**
-     * @param profits the profits to set
-     */
-    public void setProfits(ArrayList<Profit> profits) {
-        this.profits = profits;
     }
 }

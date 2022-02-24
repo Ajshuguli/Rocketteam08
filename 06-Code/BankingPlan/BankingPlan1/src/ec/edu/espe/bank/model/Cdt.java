@@ -11,18 +11,18 @@ public class Cdt {
     private float investmentMoney;
     private float interestRate;
     private int timeInDays;
-    private ArrayList<Money> money;
+   
 
-    public Cdt(float investmentMoney, float interestRate, int timeInDays, ArrayList<Money> money) {
+    public Cdt(float investmentMoney, float interestRate, int timeInDays ) {
         this.investmentMoney = investmentMoney;
         this.interestRate = interestRate;
         this.timeInDays = timeInDays;
-        this.money = money;
+        
     }
 
     @Override
     public String toString() {
-        return "Cdt{" + "investmentMoney=" + investmentMoney + ", interestRate=" + interestRate + ", timeInDays=" + timeInDays + ", money=" + money + '}';
+        return "Cdt{" + "investmentMoney=" + investmentMoney + ", interestRate=" + interestRate + ", timeInDays=" + timeInDays + '}';
     }
 
     public float calculateCdt() {
@@ -73,18 +73,5 @@ public class Cdt {
         this.timeInDays = timeInDays;
     }
 
-    /**
-     * @return the money
-     */
-    public ArrayList<Money> getMoney() {
-        return money;
-    }
-
-    /**
-     * @param money the money to set
-     */
-    public void setMoney(ArrayList<Money> money) {
-        this.money = money;
-    }
-
+   
 }
