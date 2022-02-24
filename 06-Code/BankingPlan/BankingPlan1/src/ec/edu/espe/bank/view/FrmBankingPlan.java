@@ -1,6 +1,8 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
+import ec.edu.espe.bank.model.RegisterSingleton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import org.bson.Document;
 import utils.Connection;
@@ -117,9 +119,12 @@ public class FrmBankingPlan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        FrmRegister open = new FrmRegister();
-        open.setVisible(true);
-        this.setVisible(false);
+        try {
+            JFrame register = RegisterSingleton.getInstance();
+            register.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }//GEN-LAST:event_btnRegisterActionPerformed
 
@@ -139,7 +144,7 @@ public class FrmBankingPlan extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Incorrect Data, Try Again!");
         }
-        
+
         Document data = new org.bson.Document();
         data.put("User", txtNameUser.getText());
         data.put("Password", txtPassword.getText());

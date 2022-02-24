@@ -13,15 +13,8 @@ public class FrmEstimateInterest extends javax.swing.JFrame {
      */
     public FrmEstimateInterest() {
         initComponents();
-        btnCalculate.setEnabled(false);
-        btnClean.setEnabled(false);
-        txtAmount.setEditable(false);
-        txtInterest.setEditable(false);
-
-        SpinnerNumberModel range = new SpinnerNumberModel();
-        range.setMaximum(12);
-        range.setMinimum(0);
-        spiTime.setModel(range);
+        initButtons();
+        rangeInterestRate();
     }
 
     /**
@@ -283,6 +276,20 @@ public class FrmEstimateInterest extends javax.swing.JFrame {
             btnClean.setEnabled(false);
         }
 
+    }
+
+    public void initButtons() {
+        btnCalculate.setEnabled(false);
+        btnClean.setEnabled(false);
+        txtAmount.setEditable(false);
+        txtInterest.setEditable(false);
+    }
+
+    public void rangeInterestRate() {
+        SpinnerNumberModel range = new SpinnerNumberModel();
+        range.setMaximum(12);
+        range.setMinimum(0);
+        spiTime.setModel(range);
     }
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         Double capital, time, interest, amount;

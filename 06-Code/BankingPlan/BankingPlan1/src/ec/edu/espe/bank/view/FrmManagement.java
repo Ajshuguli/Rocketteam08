@@ -55,12 +55,6 @@ public class FrmManagement extends javax.swing.JFrame {
 
         jLabel3.setText("Income :");
 
-        txtIncome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIncomeActionPerformed(evt);
-            }
-        });
-
         jLabel4.setText("CDT :");
 
         tTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -191,10 +185,6 @@ public class FrmManagement extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtIncomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIncomeActionPerformed
-
-    }//GEN-LAST:event_txtIncomeActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmAccount open = new FrmAccount();

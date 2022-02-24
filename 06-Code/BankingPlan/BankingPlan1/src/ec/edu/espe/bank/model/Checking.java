@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Checking {
 
     public float Totalbalance(float deposist, float advance, float transfer) {
-        
+
         float balance;
         balance = deposist - (advance + transfer);
         return balance;

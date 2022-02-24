@@ -20,15 +20,7 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
 
     public FrmCheckingAccount() {
         initComponents();
-        btnOK.setEnabled(false);
-        btnCancel.setEnabled(false);
-        btnDeposit.setEnabled(false);
-        btnTransfer.setEnabled(false);
-        btnClean.setEnabled(false);
-        lblInfBalance.setEnabled(false);
-        txtNameAccountHolder.setEnabled(false);
-        txtAccountNumberHolder.setEnabled(false);
-        txtAmount.setEnabled(false);
+        initButtons();
 
         modelMovs.addColumn("Name");
         modelMovs.addColumn("Account");
@@ -103,7 +95,7 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setText("Saving Account");
+        jLabel2.setText("Checking Account");
 
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -136,11 +128,6 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
             }
         });
 
-        txtAccountNumber.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAccountNumberActionPerformed(evt);
-            }
-        });
         txtAccountNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAccountNumberKeyReleased(evt);
@@ -155,11 +142,6 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
 
         lblInfBalance.setForeground(new java.awt.Color(255, 0, 0));
 
-        txtBalance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBalanceActionPerformed(evt);
-            }
-        });
         txtBalance.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBalanceKeyReleased(evt);
@@ -390,11 +372,6 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
 
         jLabel8.setText("Name of the account holder:");
 
-        txtNameAccountHolder.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameAccountHolderActionPerformed(evt);
-            }
-        });
         txtNameAccountHolder.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNameAccountHolderKeyTyped(evt);
@@ -403,11 +380,6 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
 
         jLabel9.setText("Account Number:");
 
-        txtAccountNumberHolder.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAccountNumberHolderActionPerformed(evt);
-            }
-        });
         txtAccountNumberHolder.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAccountNumberHolderKeyTyped(evt);
@@ -529,6 +501,19 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    public void initButtons() {
+        btnOK.setEnabled(false);
+        btnCancel.setEnabled(false);
+        btnDeposit.setEnabled(false);
+        btnTransfer.setEnabled(false);
+        btnAdvance.setEnabled(false);
+        btnClean.setEnabled(false);
+        lblInfBalance.setEnabled(false);
+        txtNameAccountHolder.setEnabled(false);
+        txtAccountNumberHolder.setEnabled(false);
+        txtAmount.setEnabled(false);
+    }
+
     public void enableFirstButtons() {
         if (!txtName.getText().isEmpty() && !txtBalance.getText().isEmpty() && !txtAccountNumber.getText().isEmpty()) {
             btnOK.setEnabled(true);
@@ -576,7 +561,7 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         } catch (Exception err) {
             JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
         }
-    
+
 
     }//GEN-LAST:event_btnAdvanceActionPerformed
 
@@ -631,6 +616,7 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         btnClean.setEnabled(true);
         btnDeposit.setEnabled(true);
         btnTransfer.setEnabled(true);
+        btnAdvance.setEnabled(true);
         btnClean.setEnabled(true);
         txtNameAccountHolder.setEnabled(true);
         txtAccountNumberHolder.setEnabled(true);
@@ -781,22 +767,6 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_btnAdvanceMouseClicked
-
-    private void txtBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBalanceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBalanceActionPerformed
-
-    private void txtAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAccountNumberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAccountNumberActionPerformed
-
-    private void txtNameAccountHolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameAccountHolderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameAccountHolderActionPerformed
-
-    private void txtAccountNumberHolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAccountNumberHolderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAccountNumberHolderActionPerformed
 
     /**
      * @param args the command line arguments
