@@ -1,7 +1,11 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.bank.view.FrmAccount;
+import ec.edu.espe.bank.controller.RegisterController;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import javax.swing.SpinnerNumberModel;
 import org.bson.Document;
 import utils.Connection;
@@ -19,22 +23,9 @@ public class FrmRegister extends javax.swing.JFrame {
      */
     public FrmRegister() {
         initComponents();
-        btnRegister.setEnabled(false);
-        
-        SpinnerNumberModel rangeDay = new SpinnerNumberModel();
-        rangeDay.setMaximum(31);
-        rangeDay.setMinimum(0);
-        spiDay.setModel(rangeDay);
-        
-        SpinnerNumberModel rangeMonth = new SpinnerNumberModel();
-        rangeMonth.setMaximum(12);
-        rangeMonth.setMinimum(0);
-        spiMonth.setModel(rangeMonth);
-        
-        SpinnerNumberModel rangeYear = new SpinnerNumberModel();
-        rangeYear.setMaximum(2022);
-        rangeYear.setMinimum(0);
-        spiYear.setModel(rangeYear);
+        rangeBirthDate();
+        initButton();
+
     }
 
     /**
@@ -89,17 +80,23 @@ public class FrmRegister extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Register.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconRegister.png")));
 
         txtRegisterName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtRegisterNameKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRegisterNameKeyTyped(evt);
             }
         });
 
         txtRegisterId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtRegisterIdKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRegisterIdKeyTyped(evt);
             }
         });
 
@@ -224,22 +221,51 @@ public class FrmRegister extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public void enableButton(){
-        if(!txtRegisterName.getText().isEmpty() && !txtRegisterId.getText().isEmpty() && !txtRegisterPassword.getText().isEmpty()){
+    public void enableButton() {
+        if (!txtRegisterName.getText().isEmpty() && !txtRegisterId.getText().isEmpty() && !txtRegisterPassword.getText().isEmpty()) {
             btnRegister.setEnabled(true);
-        }else{
+        } else {
             btnRegister.setEnabled(false);
         }
     }
+
+    public void rangeBirthDate() {
+        SpinnerNumberModel rangeDay = new SpinnerNumberModel();
+        rangeDay.setMaximum(31);
+        rangeDay.setMinimum(0);
+        spiDay.setModel(rangeDay);
+
+        SpinnerNumberModel rangeMonth = new SpinnerNumberModel();
+        rangeMonth.setMaximum(12);
+        rangeMonth.setMinimum(0);
+        spiMonth.setModel(rangeMonth);
+
+        SpinnerNumberModel rangeYear = new SpinnerNumberModel();
+        rangeYear.setMaximum(2022);
+        rangeYear.setMinimum(0);
+        spiYear.setModel(rangeYear);
+    }
+
+    public void initButton() {
+        btnRegister.setEnabled(false);
+    }
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        String user = txtRegisterName.getText();
+        String id = txtRegisterId.getText();
+        String password = txtRegisterPassword.getText();
         String Birthdate = spiDay.getValue().toString() + " / " + spiMonth.getValue().toString() + " / " + spiYear.getValue().toString();
 
-        Document data = new org.bson.Document();
-        data.put("User", txtRegisterName.getText());
-        data.put("Id", txtRegisterId.getText());
-        data.put("BirthDate", Birthdate);
-        data.put("Password", txtRegisterPassword.getText());
-        Register.insertOne(data);
+        try {
+            JFrame register = RegisterController.updateData(user, id, Birthdate, password);
+            Document data = new org.bson.Document();
+            data.put("User", txtRegisterName.getText());
+            data.put("Id", txtRegisterId.getText());
+            data.put("BirthDate", Birthdate);
+            data.put("Password", txtRegisterPassword.getText());
+            Register.insertOne(data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         FrmAccount open = new FrmAccount();
         open.setVisible(true);
@@ -255,8 +281,33 @@ public class FrmRegister extends javax.swing.JFrame {
     }//GEN-LAST:event_txtRegisterIdKeyReleased
 
     private void txtRegisterPasswordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRegisterPasswordKeyReleased
-       enableButton();
+        enableButton();
     }//GEN-LAST:event_txtRegisterPasswordKeyReleased
+
+    private void txtRegisterIdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRegisterIdKeyTyped
+        char numbers = evt.getKeyChar();
+        if (numbers < '0' || numbers > '9') {
+            evt.consume();
+        }
+
+        if (txtRegisterId.getText().length() >= 10) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, The account number only has 10 digits");
+            txtRegisterId.setText("");
+        }
+    }//GEN-LAST:event_txtRegisterIdKeyTyped
+
+    private void txtRegisterNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRegisterNameKeyTyped
+        char letters = evt.getKeyChar();
+        if ((letters < 'a' || letters > 'z') && (letters < 'A' || letters > 'Z')) {
+            evt.consume();
+        }
+        if (txtRegisterName.getText().length() >= 15) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, Should not be a very long name");
+            txtRegisterName.setText("");
+        }
+    }//GEN-LAST:event_txtRegisterNameKeyTyped
 
     /**
      * @param args the command line arguments

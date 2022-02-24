@@ -6,19 +6,17 @@ package ec.edu.espe.bank.model;
  */
 public class Management {
 
-    private String checkStatus;
     private float income;
     private float transaction;
 
-    public Management(String checkStatus, float income, float transaction) {
-        this.checkStatus = checkStatus;
+    public Management(float income, float transaction) {
         this.income = income;
         this.transaction = transaction;
     }
 
     @Override
     public String toString() {
-        return "Management{" + "checkStatus=" + checkStatus + ", income=" + income + ", transaction=" + transaction + '}';
+        return "Management{" + ", income=" + income + ", transaction=" + transaction + '}';
     }
 
     public void checkAccount() {
@@ -37,20 +35,6 @@ public class Management {
 
         return new Account();
 
-    }
-
-    /**
-     * @return the checkStatus
-     */
-    public String getCheckStatus() {
-        return checkStatus;
-    }
-
-    /**
-     * @param checkStatus the checkStatus to set
-     */
-    public void setCheckStatus(String checkStatus) {
-        this.checkStatus = checkStatus;
     }
 
     /**

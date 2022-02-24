@@ -1,39 +1,61 @@
 package ec.edu.espe.bank.view;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author Camila Teca, DEEE-ESPE
  */
 public class FrmSavingAccountTest {
-    
+
     public FrmSavingAccountTest() {
     }
 
     /**
-     * Test of enableFirstButtons method, of class FrmSavingAccount.
+     * Test of deposit method, of class FrmSavingAccount.
      */
     @Test
-    public void testEnableFirstButtons() {
-        System.out.println("enableFirstButtons");
+    public void testDeposit() {
+        System.out.println("deposit");
+        float balance = 23.45F;
+        float amount = 25.34F;
         FrmSavingAccount instance = new FrmSavingAccount();
-        instance.enableFirstButtons();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.deposit(balance, amount);
+        float expResult = 48.79F;
+        float result = (float) Double.sum(balance, amount);
+        assertEquals(expResult, result, 0.001);
+
     }
 
     /**
-     * Test of main method, of class FrmSavingAccount.
+     * Test of withDraw method, of class FrmSavingAccount.
      */
     @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        FrmSavingAccount.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testWithDraw() {
+        System.out.println("withDraw");
+        float balance = 23.45F;
+        float amount = -25.34F;
+        FrmSavingAccount instance = new FrmSavingAccount();
+        instance.withDraw(balance, amount);
+        float expResult = -1.89F;
+        float result = (float) Double.sum(balance, amount);
+        assertEquals(expResult, result, 0.001);
     }
-    
+
+    /**
+     * Test of transfer method, of class FrmSavingAccount.
+     */
+    @Test
+    public void testTransfer() {
+        System.out.println("transfer");
+        float balance = 23.45F;
+        float amount = 25.34F;
+        FrmSavingAccount instance = new FrmSavingAccount();
+        instance.transfer(balance, amount);
+        float expResult = 48.79F;
+        float result = (float) Double.sum(balance, amount);
+        assertEquals(expResult, result, 0.001);
+    }
+
 }

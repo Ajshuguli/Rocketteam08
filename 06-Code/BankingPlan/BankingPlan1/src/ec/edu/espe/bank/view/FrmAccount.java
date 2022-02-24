@@ -229,7 +229,7 @@ public class FrmAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSavingActionPerformed
 
     private void btnGuideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuideActionPerformed
-        FrmInformation open = new FrmInformation();
+        FrmGuide open = new FrmGuide();
         open.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnGuideActionPerformed

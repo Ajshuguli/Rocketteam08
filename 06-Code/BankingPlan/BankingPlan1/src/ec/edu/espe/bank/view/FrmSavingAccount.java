@@ -1,9 +1,11 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
+import ec.edu.espe.bank.controller.SavingController;
 import ec.edu.espe.bank.model.Movement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
@@ -20,23 +22,37 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
     public FrmSavingAccount() {
         initComponents();
-        btnOK.setEnabled(false);
-        btnCancel.setEnabled(false);
-        btnDeposit.setEnabled(false);
-        btnWithdraw.setEnabled(false);
-        btnTransfer.setEnabled(false);
-        btnClean.setEnabled(false);
-        lblInfBalance.setEnabled(false);
-        txtNameAccountHolder.setEnabled(false);
-        txtAccountNumberHolder.setEnabled(false);
-        txtAmount.setEnabled(false);
-
+        initButtons();
         modelMovs.addColumn("Name");
         modelMovs.addColumn("Account");
         modelMovs.addColumn("Date");
         modelMovs.addColumn("Type");
         modelMovs.addColumn("Amount");
         tblMovements.setModel(modelMovs);
+    }
+
+    public void deposit(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sum = balance + amount;
+    }
+
+    public void withDraw(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sustract = balance - amount;
+    }
+
+    public void transfer(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sum = balance + amount;
     }
 
     /**
@@ -351,11 +367,6 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblMovements);
 
         txtAvailableBalance.setEditable(false);
-        txtAvailableBalance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAvailableBalanceActionPerformed(evt);
-            }
-        });
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 153, 0));
@@ -535,6 +546,19 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             btnCancel.setEnabled(false);
         }
     }
+
+    public void initButtons() {
+        btnOK.setEnabled(false);
+        btnCancel.setEnabled(false);
+        btnDeposit.setEnabled(false);
+        btnWithdraw.setEnabled(false);
+        btnTransfer.setEnabled(false);
+        btnClean.setEnabled(false);
+        lblInfBalance.setEnabled(false);
+        txtNameAccountHolder.setEnabled(false);
+        txtAccountNumberHolder.setEnabled(false);
+        txtAmount.setEnabled(false);
+    }
     private void btnEstInterestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstInterestActionPerformed
         FrmEstimateInterest open = new FrmEstimateInterest();
         open.setVisible(true);
@@ -573,17 +597,20 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnDeposit.getText();
+
         try {
+            JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnDeposit.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful Deposit");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnDepositActionPerformed
 
@@ -641,17 +668,20 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnWithdraw.getText();
+
         try {
+            JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnWithdraw.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful Withdraw");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnWithdrawActionPerformed
 
@@ -681,23 +711,22 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnTransfer.getText();
+
         try {
+            JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnTransfer.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful Transfer");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnTransferActionPerformed
-
-    private void txtAvailableBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAvailableBalanceActionPerformed
-
-    }//GEN-LAST:event_txtAvailableBalanceActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmAccount open = new FrmAccount();

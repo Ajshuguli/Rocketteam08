@@ -1,6 +1,8 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
+import ec.edu.espe.bank.model.RegisterSingleton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import org.bson.Document;
 import utils.Connection;
@@ -86,6 +88,11 @@ public class FrmBankingPlan extends javax.swing.JFrame {
                 btnLoginMouseClicked(evt);
             }
         });
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 130, -1));
 
         btnExit.setBackground(new java.awt.Color(0, 0, 204));
@@ -117,9 +124,12 @@ public class FrmBankingPlan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        FrmRegister open = new FrmRegister();
-        open.setVisible(true);
-        this.setVisible(false);
+        try {
+            JFrame register = RegisterSingleton.getInstance();
+            register.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }//GEN-LAST:event_btnRegisterActionPerformed
 
@@ -139,12 +149,16 @@ public class FrmBankingPlan extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Incorrect Data, Try Again!");
         }
-        
+
         Document data = new org.bson.Document();
         data.put("User", txtNameUser.getText());
         data.put("Password", txtPassword.getText());
         Login.insertOne(data);
     }//GEN-LAST:event_btnLoginMouseClicked
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
