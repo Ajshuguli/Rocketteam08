@@ -1,8 +1,5 @@
 package ec.edu.espe.bank.view;
 
-
-
-
 /**
  *
  * @author Sebas
@@ -14,7 +11,7 @@ public class FrmAccount extends javax.swing.JFrame {
      */
     public FrmAccount() {
         initComponents();
-       
+
     }
 
     /**
@@ -214,35 +211,37 @@ public class FrmAccount extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCheckingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckingActionPerformed
-       FrmCheckingAccount open = new FrmCheckingAccount();
+        FrmCheckingAccount open = new FrmCheckingAccount();
         open.setVisible(true);
-        this.setVisible (false);
+        this.setVisible(false);
     }//GEN-LAST:event_btnCheckingActionPerformed
 
     private void btnCdtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCdtActionPerformed
-       FmrCDTAccount open = new FmrCDTAccount();
+        FmrCDTAccount open = new FmrCDTAccount();
         open.setVisible(true);
-        this.setVisible (false);
+        this.setVisible(false);
     }//GEN-LAST:event_btnCdtActionPerformed
 
     private void btnSavingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavingActionPerformed
         FrmSavingAccount open = new FrmSavingAccount();
         open.setVisible(true);
-        this.setVisible (false);
+        this.setVisible(false);
     }//GEN-LAST:event_btnSavingActionPerformed
 
     private void btnGuideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuideActionPerformed
-         FrmInformation open = new FrmInformation();
+        FrmInformation open = new FrmInformation();
         open.setVisible(true);
-        this.setVisible (false);
+        this.setVisible(false);
     }//GEN-LAST:event_btnGuideActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-          System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagementActionPerformed
-        // TODO add your handling code here:
+        FrmManagement open = new FrmManagement();
+        open.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnManagementActionPerformed
 
     /**

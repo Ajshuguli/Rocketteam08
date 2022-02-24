@@ -552,10 +552,6 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         txtAccountNumberHolder.getText();
         txtAmount.getText();
 
-        txtNameAccountHolder.setText("");
-        txtAccountNumberHolder.setText("");
-        txtAmount.setText("");
-
         Movement movement = new Movement();
         movement.setDateMovement(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
         movement.setDeposit(btnDeposit.getText());
@@ -624,10 +620,6 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         txtAccountNumberHolder.getText();
         txtAmount.getText();
 
-        txtNameAccountHolder.setText("");
-        txtAccountNumberHolder.setText("");
-        txtAmount.setText("");
-
         Movement movement = new Movement();
         movement.setDateMovement(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
         movement.setWithdraw(btnWithdraw.getText());
@@ -667,10 +659,6 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         txtNameAccountHolder.getText();
         txtAccountNumberHolder.getText();
         txtAmount.getText();
-
-        txtNameAccountHolder.setText("");
-        txtAccountNumberHolder.setText("");
-        txtAmount.setText("");
 
         Movement movement = new Movement();
         movement.setDateMovement(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));

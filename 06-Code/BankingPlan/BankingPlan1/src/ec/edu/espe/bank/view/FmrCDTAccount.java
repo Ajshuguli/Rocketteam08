@@ -25,6 +25,8 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
     public FmrCDTAccount() {
         initComponents();
+        txtInterest.setEditable(false);
+        txtAmount.setEditable(false);
 
     }
 
@@ -160,7 +162,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
         jLabel8.setText("Amount");
 
-        txtAmount.setEnabled(false);
         txtAmount.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAmountKeyTyped(evt);

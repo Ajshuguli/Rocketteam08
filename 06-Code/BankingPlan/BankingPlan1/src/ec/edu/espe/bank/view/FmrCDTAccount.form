@@ -294,9 +294,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtAmount">
-          <Properties>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
           <Events>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAmountKeyTyped"/>
           </Events>
