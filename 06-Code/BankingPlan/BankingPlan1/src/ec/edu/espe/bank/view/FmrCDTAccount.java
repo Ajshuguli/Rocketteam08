@@ -1,8 +1,10 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
+import ec.edu.espe.bank.controller.CdtController;
 import utils.Connection;
 import java.awt.Color;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
@@ -256,18 +258,21 @@ public class FmrCDTAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        try {
-            Document data = new Document();
+        String user = txtName.getText();
+        String id = txtId.getText();
+        String investment = txtInvestment.getText();
+        String yearOfInvestment = investYears.getSelectedItem().toString();
 
+        try {
+            JFrame cdtAdd = CdtController.updateData(user, id, investment, yearOfInvestment);
+            Document data = new Document();
             data.put("id", Integer.parseInt(txtId.getText()));
             data.put("User", txtName.getText());
             data.put("Investment", Float.parseFloat(txtInvestment.getText()));
             data.put("YearsOfInvestment", investYears.getSelectedItem().hashCode());
-
-            JOptionPane.showMessageDialog(this, "Successful");
             CDTAccount.insertOne(data);
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnAddActionPerformed
 

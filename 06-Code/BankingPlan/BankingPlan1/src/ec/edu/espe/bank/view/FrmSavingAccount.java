@@ -1,9 +1,12 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
+import ec.edu.espe.bank.controller.CheckingController;
+import ec.edu.espe.bank.controller.SavingController;
 import ec.edu.espe.bank.model.Movement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
@@ -571,17 +574,21 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
+        String name=txtNameAccountHolder.getText();
+        String accountNumber=txtAccountNumberHolder.getText ();
+        String movementType=btnDeposit.getText();
+        
+        
         try {
-            Document data = new org.bson.Document();
+            JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
+             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnDeposit.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful Deposit");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnDepositActionPerformed
 
@@ -639,17 +646,21 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
+      String name=txtNameAccountHolder.getText();
+        String accountNumber=txtAccountNumberHolder.getText ();
+        String movementType=btnWithdraw.getText();
+        
+        
         try {
-            Document data = new org.bson.Document();
+            JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
+             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnWithdraw.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful Withdraw");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnWithdrawActionPerformed
 
@@ -679,17 +690,21 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
+        String name=txtNameAccountHolder.getText();
+        String accountNumber=txtAccountNumberHolder.getText ();
+        String movementType=btnTransfer.getText();
+        
+        
         try {
-            Document data = new org.bson.Document();
+            JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
+             Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnTransfer.getText());
             data.put("Amount", txtAmount.getText());
             Movements.insertOne(data);
-            JOptionPane.showMessageDialog(this, "Successful Transfer");
-
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnTransferActionPerformed
 

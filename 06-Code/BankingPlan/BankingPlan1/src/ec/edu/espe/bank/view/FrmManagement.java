@@ -1,7 +1,11 @@
 package ec.edu.espe.bank.view;
 
+import ec.edu.espe.bank.controller.CheckingController;
+import ec.edu.espe.bank.controller.ManagementController;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import org.bson.Document;
 
 /**
  *
@@ -167,8 +171,9 @@ public class FrmManagement extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
-        int Trasaction;
-        int Income;
+      
+        String Trasaction = txtTransaction.getText();
+        String Income = txtIncome.getText();
         
 
         o[0] = txtTransaction.getText();
@@ -177,6 +182,20 @@ public class FrmManagement extends javax.swing.JFrame {
 
         tableManagement.addRow(o);
         JOptionPane.showMessageDialog(null, "select the row to calculate the total");
+     
+        
+        
+        try {
+            JFrame managementAdd = ManagementController.updateData(Trasaction, Income);
+             Document data = new org.bson.Document();
+            data.put("Transaction", txtTransaction.getText());
+            data.put("Income", txtIncome.getText());
+            
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+      
     }//GEN-LAST:event_btnEnterActionPerformed
 
     private void btnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalActionPerformed

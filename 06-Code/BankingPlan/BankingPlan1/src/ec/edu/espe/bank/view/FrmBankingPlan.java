@@ -88,6 +88,11 @@ public class FrmBankingPlan extends javax.swing.JFrame {
                 btnLoginMouseClicked(evt);
             }
         });
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 130, -1));
 
         btnExit.setBackground(new java.awt.Color(0, 0, 204));
@@ -150,6 +155,10 @@ public class FrmBankingPlan extends javax.swing.JFrame {
         data.put("Password", txtPassword.getText());
         Login.insertOne(data);
     }//GEN-LAST:event_btnLoginMouseClicked
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,8 +1,10 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
+import ec.edu.espe.bank.controller.RegisterController;
 
 import ec.edu.espe.bank.view.FrmAccount;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import javax.swing.SpinnerNumberModel;
@@ -249,14 +251,22 @@ public class FrmRegister extends javax.swing.JFrame {
         btnRegister.setEnabled(false);
     }
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        String user = txtRegisterName.getText();
+        String id = txtRegisterId.getText();
+        String password = txtRegisterPassword.getText();
         String Birthdate = spiDay.getValue().toString() + " / " + spiMonth.getValue().toString() + " / " + spiYear.getValue().toString();
 
-        Document data = new org.bson.Document();
-        data.put("User", txtRegisterName.getText());
-        data.put("Id", txtRegisterId.getText());
-        data.put("BirthDate", Birthdate);
-        data.put("Password", txtRegisterPassword.getText());
-        Register.insertOne(data);
+        try {
+            JFrame register = RegisterController.updateData(user, id, Birthdate, password);
+            Document data = new org.bson.Document();
+            data.put("User", txtRegisterName.getText());
+            data.put("Id", txtRegisterId.getText());
+            data.put("BirthDate", Birthdate);
+            data.put("Password", txtRegisterPassword.getText());
+            Register.insertOne(data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         FrmAccount open = new FrmAccount();
         open.setVisible(true);
