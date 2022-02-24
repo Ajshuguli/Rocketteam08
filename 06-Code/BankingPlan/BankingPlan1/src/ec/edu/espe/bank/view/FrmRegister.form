@@ -218,11 +218,13 @@
         <Component class="javax.swing.JTextField" name="txtRegisterName">
           <Events>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtRegisterNameKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtRegisterNameKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtRegisterId">
           <Events>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtRegisterIdKeyReleased"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtRegisterIdKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtRegisterPassword">

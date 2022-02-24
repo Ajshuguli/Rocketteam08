@@ -2,6 +2,7 @@ package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.bank.view.FrmAccount;
+import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 import org.bson.Document;
 import utils.Connection;
@@ -95,11 +96,17 @@ public class FrmRegister extends javax.swing.JFrame {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtRegisterNameKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRegisterNameKeyTyped(evt);
+            }
         });
 
         txtRegisterId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtRegisterIdKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRegisterIdKeyTyped(evt);
             }
         });
 
@@ -257,6 +264,31 @@ public class FrmRegister extends javax.swing.JFrame {
     private void txtRegisterPasswordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRegisterPasswordKeyReleased
        enableButton();
     }//GEN-LAST:event_txtRegisterPasswordKeyReleased
+
+    private void txtRegisterIdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRegisterIdKeyTyped
+        char numbers = evt.getKeyChar();
+        if (numbers < '0' || numbers > '9') {
+            evt.consume();
+        }
+
+        if (txtRegisterId.getText().length() >= 10) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, The account number only has 10 digits");
+            txtRegisterId.setText("");
+        }
+    }//GEN-LAST:event_txtRegisterIdKeyTyped
+
+    private void txtRegisterNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRegisterNameKeyTyped
+        char letters = evt.getKeyChar();
+        if ((letters < 'a' || letters > 'z') && (letters < 'A' || letters > 'Z')) {
+            evt.consume();
+        }
+        if (txtRegisterName.getText().length() >= 15) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, Should not be a very long name");
+            txtRegisterName.setText("");
+        }
+    }//GEN-LAST:event_txtRegisterNameKeyTyped
 
     /**
      * @param args the command line arguments
