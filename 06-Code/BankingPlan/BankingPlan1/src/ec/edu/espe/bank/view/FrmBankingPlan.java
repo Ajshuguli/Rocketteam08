@@ -1,8 +1,6 @@
-package ec.edu.espe.bank.controller;
+package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.bank.view.FrmAccount;
-import ec.edu.espe.bank.view.FrmRegister;
 import javax.swing.JOptionPane;
 import org.bson.Document;
 import utils.Connection;
