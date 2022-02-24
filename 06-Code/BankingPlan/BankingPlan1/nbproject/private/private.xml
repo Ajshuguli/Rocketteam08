@@ -1,35 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-<<<<<<< HEAD
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmManagement.java</file>
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/test/ec/edu/espe/bank/view/FrmManagementTest.java</file>
-            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Management.java</file>
+            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmManagement.java</file>
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmRegister.java</file>
-            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmCheckingAccount.java</file>
-            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmSavingAccount.java</file>
-            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/model/Profile.java</file>
+            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmBankingPlan.java</file>
+            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FmrCDTAccount.java</file>
             <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmAccount.java</file>
-            <file>file:/C:/II%20SEMESTRE/PROYECT/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmInformation.java</file>
         </group>
     </open-files>
-=======
-<<<<<<< HEAD
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
-    </open-files>
-=======
-<<<<<<< HEAD
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FmrCDTAccount.java</file>
-            <file>file:/D:/codigo%20s2/proyectoGeneral/Rocketteam08/06-Code/BankingPlan/BankingPlan1/src/ec/edu/espe/bank/view/FrmAccount.java</file>
-        </group>
-    </open-files>
-=======
->>>>>>> 9451319977c0fa4eb7af36de827ea483a14d0521
->>>>>>> 2c8f8585cefa14758b7d9b8034078a0f14a7982c
->>>>>>> bdaaee85a70865ae40f58192d9a290331a050a74
 </project-private>

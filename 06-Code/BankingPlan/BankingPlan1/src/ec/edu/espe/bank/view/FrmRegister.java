@@ -1,11 +1,10 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
-<<<<<<< HEAD
+
 import ec.edu.espe.bank.view.FrmAccount;
 import javax.swing.JOptionPane;
-=======
->>>>>>> bdaaee85a70865ae40f58192d9a290331a050a74
+
 import javax.swing.SpinnerNumberModel;
 import org.bson.Document;
 import utils.Connection;
