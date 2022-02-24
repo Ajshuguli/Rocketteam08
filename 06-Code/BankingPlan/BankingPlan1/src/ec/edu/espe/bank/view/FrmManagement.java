@@ -78,6 +78,7 @@ public class FrmManagement extends javax.swing.JFrame {
         jIncome.setText("Income :");
         jPanel1.add(jIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 103, -1, -1));
 
+<<<<<<< HEAD
         txtIncome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIncomeActionPerformed(evt);
@@ -89,6 +90,9 @@ public class FrmManagement extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 100, 222, -1));
+=======
+        jLabel4.setText("CDT :");
+>>>>>>> bdaaee85a70865ae40f58192d9a290331a050a74
 
         tTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,10 +159,6 @@ public class FrmManagement extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtIncomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIncomeActionPerformed
-
-    }//GEN-LAST:event_txtIncomeActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmAccount open = new FrmAccount();

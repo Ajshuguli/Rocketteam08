@@ -22,8 +22,6 @@ public class Saving {
         this.profits = profits;
     }
 
-    
-
     @Override
     public String toString() {
         return "Saving{" + "accountNumber=" + getAccountNumber() + ", money=" + getMoney() + ", profits=" + getProfits() + '}';
@@ -42,7 +40,7 @@ public class Saving {
     }
 
     public Interest estimateInterest() {
-        return  new Interest();
+        return new Interest();
     }
 
     /**
@@ -115,5 +113,3 @@ public class Saving {
         this.profits = profits;
     }
 }
-
-    

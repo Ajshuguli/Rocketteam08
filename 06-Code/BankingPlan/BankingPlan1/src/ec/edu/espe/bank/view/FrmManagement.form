@@ -89,6 +89,7 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtIncome">
+<<<<<<< HEAD
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIncomeActionPerformed"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtIncomeKeyTyped"/>
@@ -98,6 +99,15 @@
               <AbsoluteConstraints x="126" y="100" width="222" height="-1"/>
             </Constraint>
           </Constraints>
+=======
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CDT :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtCDT">
+>>>>>>> bdaaee85a70865ae40f58192d9a290331a050a74
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>

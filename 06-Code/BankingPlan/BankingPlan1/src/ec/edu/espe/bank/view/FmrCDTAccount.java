@@ -1,7 +1,6 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.bank.view.FrmAccount;
 import utils.Connection;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -16,15 +15,11 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
     MongoCollection<Document> CDTAccount = new Connection().obtenerDB().getCollection("CDTAccounts");
     DefaultTableModel tabla = new DefaultTableModel() {
-        @Override
-        public boolean isCellEditable(int row, int column) {
-            return false; //To change body of generated methods, choose Tools | Templates.
-        }
-
     };
 
     public FmrCDTAccount() {
         initComponents();
+        initButtons();
 
     }
 
@@ -48,7 +43,7 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         investYears = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         btnCalculate = new javax.swing.JButton();
-        ButtonExit = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
         btnAdd = new javax.swing.JButton();
         btnReturn = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
@@ -57,7 +52,7 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         lblErrorCedula = new javax.swing.JLabel();
         lblErrorName = new javax.swing.JLabel();
-        btnClear = new javax.swing.JButton();
+        btnClean = new javax.swing.JButton();
         lblErrorInvestment = new javax.swing.JLabel();
         lblErrorInterest = new javax.swing.JLabel();
         lblErrorAmount = new javax.swing.JLabel();
@@ -78,11 +73,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         jLabel3.setText("Name");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 149, -1, -1));
 
-        txtId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdActionPerformed(evt);
-            }
-        });
         txtId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtIdKeyTyped(evt);
@@ -90,11 +80,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         });
         getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 93, 156, -1));
 
-        txtName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameActionPerformed(evt);
-            }
-        });
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNameKeyTyped(evt);
@@ -116,11 +101,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 261, -1, -1));
 
         investYears.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 ", "4", "5", "6" }));
-        investYears.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                investYearsActionPerformed(evt);
-            }
-        });
         getContentPane().add(investYears, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 258, 156, -1));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
@@ -134,10 +114,10 @@ public class FmrCDTAccount extends javax.swing.JFrame {
             }
         });
 
-        ButtonExit.setText("Exit");
-        ButtonExit.addActionListener(new java.awt.event.ActionListener() {
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonExitActionPerformed(evt);
+                btnExitActionPerformed(evt);
             }
         });
 
@@ -160,7 +140,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
         jLabel8.setText("Amount");
 
-        txtAmount.setEnabled(false);
         txtAmount.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAmountKeyTyped(evt);
@@ -168,11 +147,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         });
 
         txtInterest.setEnabled(false);
-        txtInterest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtInterestActionPerformed(evt);
-            }
-        });
         txtInterest.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtInterestKeyTyped(evt);
@@ -181,11 +155,11 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cdtImagen.png"))); // NOI18N
 
-        btnClear.setText("Clear");
-        btnClear.setEnabled(false);
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
+        btnClean.setText("Clean");
+        btnClean.setEnabled(false);
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
+                btnCleanActionPerformed(evt);
             }
         });
 
@@ -225,9 +199,9 @@ public class FmrCDTAccount extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(btnAdd)
                 .addGap(42, 42, 42)
-                .addComponent(btnClear)
+                .addComponent(btnClean)
                 .addGap(47, 47, 47)
-                .addComponent(ButtonExit)
+                .addComponent(btnExit)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -262,10 +236,10 @@ public class FmrCDTAccount extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalculate)
-                    .addComponent(ButtonExit)
+                    .addComponent(btnExit)
                     .addComponent(btnAdd)
                     .addComponent(btnReturn)
-                    .addComponent(btnClear))
+                    .addComponent(btnClean))
                 .addGap(58, 58, 58))
         );
 
@@ -273,14 +247,13 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdActionPerformed
-
-    private void ButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonExitActionPerformed
+    public void initButtons() {
+        txtInterest.setEditable(false);
+        txtAmount.setEditable(false);
+    }
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_ButtonExitActionPerformed
+    }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         try {
@@ -303,14 +276,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         open.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnReturnActionPerformed
-
-    private void investYearsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_investYearsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_investYearsActionPerformed
-
-    private void txtInterestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInterestActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtInterestActionPerformed
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         Double capital, reason, time, interest, amount;
@@ -343,10 +308,6 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         habilyInsert();
         habilyClean();
     }//GEN-LAST:event_txtIdKeyTyped
-
-    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameActionPerformed
 
     private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
         int key = evt.getKeyChar();
@@ -387,9 +348,9 @@ public class FmrCDTAccount extends javax.swing.JFrame {
         habilyClean();
     }//GEN-LAST:event_txtInvestmentKeyTyped
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         clearFields();
-    }//GEN-LAST:event_btnClearActionPerformed
+    }//GEN-LAST:event_btnCleanActionPerformed
 
     private void txtInterestKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInterestKeyTyped
         double key = evt.getKeyChar();
@@ -439,9 +400,9 @@ public class FmrCDTAccount extends javax.swing.JFrame {
 
     public void habilyClean() {
         if (!txtId.getText().isEmpty() && !txtName.getText().isEmpty() && !txtInvestment.getText().isEmpty()) {
-            btnClear.setEnabled(true);
+            btnClean.setEnabled(true);
         } else {
-            btnClear.setEnabled(false);
+            btnClean.setEnabled(false);
         }
     }
 
@@ -496,10 +457,10 @@ public class FmrCDTAccount extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonExit;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnCalculate;
-    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnClean;
+    private javax.swing.JButton btnExit;
     private javax.swing.JButton btnReturn;
     private javax.swing.JComboBox<String> investYears;
     private javax.swing.JLabel jLabel1;

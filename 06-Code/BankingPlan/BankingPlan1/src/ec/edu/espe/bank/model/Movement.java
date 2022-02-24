@@ -1,4 +1,3 @@
-
 package ec.edu.espe.bank.model;
 
 /**
@@ -6,6 +5,7 @@ package ec.edu.espe.bank.model;
  * @author Camila
  */
 public class Movement {
+
     private String dateMovement;
     private String deposit;
     private String withdraw;
@@ -81,5 +81,5 @@ public class Movement {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-    
+
 }

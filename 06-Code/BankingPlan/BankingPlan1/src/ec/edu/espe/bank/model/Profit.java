@@ -1,4 +1,3 @@
-
 package ec.edu.espe.bank.model;
 
 /**
@@ -14,7 +13,6 @@ public class Profit {
         this.savingsTotal = savingsTotal;
         this.checkingTotal = checkingTotal;
     }
-
 
     public float seeSavings() {
 
