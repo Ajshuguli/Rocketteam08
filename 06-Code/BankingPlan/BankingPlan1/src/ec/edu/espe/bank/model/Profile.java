@@ -7,20 +7,20 @@ package ec.edu.espe.bank.model;
 public class Profile {
 
     private String name;
-    private int BrithDate;
+    private int birthDate;
     private int id;
     private int password;
 
-    public Profile(String name, int age, int id, int password) {
+    public Profile(String name, int birthDate, int id, int password) {
         this.name = name;
-        this.BrithDate = BrithDate;
+        this.birthDate = birthDate;
         this.id = id;
         this.password = password;
     }
 
     @Override
     public String toString() {
-        return "Profile{" + "name=" + name + ", BrithDate=" + BrithDate+ ", id=" + id + ", password=" + password + '}';
+        return "Profile{" + "name=" + name + ", birthDate=" + birthDate + ", id=" + id + ", password=" + password + '}';
     }
 
     public void changePassword() {
@@ -46,17 +46,17 @@ public class Profile {
     }
 
     /**
-     * @return the age
+     * @return the birthDate
      */
-    public int getBrithDate() {
-        return BrithDate;
+    public int getBirthDate() {
+        return birthDate;
     }
 
     /**
-     * @param age the age to set
+     * @param birthDate the birthDate to set
      */
-    public void setBrithDate(int BrithDate) {
-        this.BrithDate = BrithDate;
+    public void setBirthDate(int birthDate) {
+        this.birthDate = birthDate;
     }
 
     /**

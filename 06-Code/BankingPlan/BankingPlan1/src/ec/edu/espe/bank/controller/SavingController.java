@@ -1,4 +1,3 @@
-
 package ec.edu.espe.bank.controller;
 
 import javax.swing.JFrame;
@@ -9,7 +8,8 @@ import org.bson.Document;
  * @author Simbaña J
  */
 public class SavingController {
-        private static JFrame register;
+
+    private static JFrame register;
 
     public static JFrame updateData(String name, String accountNumber, String movementType, double amount) {
 
@@ -21,4 +21,3 @@ public class SavingController {
         return register;
     }
 }
-

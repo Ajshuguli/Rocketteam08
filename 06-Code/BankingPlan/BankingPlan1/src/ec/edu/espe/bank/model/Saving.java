@@ -1,7 +1,5 @@
 package ec.edu.espe.bank.model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author RocketTeam
@@ -11,7 +9,6 @@ public class Saving {
     private String name;
     private String accountNumber;
     private float amount;
-    
 
     public Saving(String name, String accountNumber, float amount) {
         this.name = name;
@@ -21,7 +18,7 @@ public class Saving {
 
     @Override
     public String toString() {
-        return "Saving{" + "accountNumber=" + getAccountNumber()  + '}';
+        return "Saving{" + "accountNumber=" + getAccountNumber() + '}';
     }
 
     public float deposit() {

@@ -1,7 +1,5 @@
 package ec.edu.espe.bank.model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author RocketTeam
@@ -15,10 +13,10 @@ public class Checking {
         return balance;
     }
     private String accountNumber;
-    
-    public Checking(String accountNumber  ) {
+
+    public Checking(String accountNumber) {
         this.accountNumber = accountNumber;
-        
+
     }
 
     public float deposit() {

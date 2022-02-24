@@ -3,7 +3,6 @@ package ec.edu.espe.bank.view;
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.bank.controller.RegisterController;
 
-import ec.edu.espe.bank.view.FrmAccount;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 

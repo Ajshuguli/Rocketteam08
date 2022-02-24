@@ -1,7 +1,5 @@
 package ec.edu.espe.bank.model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author RocketTeam
@@ -11,13 +9,12 @@ public class Cdt {
     private float investmentMoney;
     private float interestRate;
     private int timeInDays;
-   
 
-    public Cdt(float investmentMoney, float interestRate, int timeInDays ) {
+    public Cdt(float investmentMoney, float interestRate, int timeInDays) {
         this.investmentMoney = investmentMoney;
         this.interestRate = interestRate;
         this.timeInDays = timeInDays;
-        
+
     }
 
     @Override
@@ -73,5 +70,4 @@ public class Cdt {
         this.timeInDays = timeInDays;
     }
 
-   
 }

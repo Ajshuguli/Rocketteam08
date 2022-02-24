@@ -516,6 +516,30 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         txtAmount.setEnabled(false);
     }
 
+    public void deposit(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sum = balance + amount;
+    }
+
+    public void withDraw(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sustract = balance - amount;
+    }
+
+    public void transfer(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sum = balance + amount;
+    }
+
     public void enableFirstButtons() {
         if (!txtName.getText().isEmpty() && !txtBalance.getText().isEmpty() && !txtAccountNumber.getText().isEmpty()) {
             btnOK.setEnabled(true);
@@ -551,14 +575,13 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
-        String name=txtNameAccountHolder.getText();
-        String accountNumber=txtAccountNumberHolder.getText ();
-        String movementType=btnTransfer.getText();
-        
-        
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnTransfer.getText();
+
         try {
             JFrame checkingAdd = CheckingController.updateData(name, accountNumber, movementType, amount);
-             Document data = new org.bson.Document();
+            Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnTransfer.getText());
@@ -603,15 +626,13 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
-        
-        String name=txtNameAccountHolder.getText();
-        String accountNumber=txtAccountNumberHolder.getText ();
-        String movementType=btnDeposit.getText();
-        
-        
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnDeposit.getText();
+
         try {
             JFrame checkingAdd = CheckingController.updateData(name, accountNumber, movementType, amount);
-             Document data = new org.bson.Document();
+            Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnDeposit.getText());
@@ -676,14 +697,13 @@ public class FrmCheckingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
-       String name=txtNameAccountHolder.getText();
-        String accountNumber=txtAccountNumberHolder.getText ();
-        String movementType=btnTransfer.getText();
-        
-        
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnTransfer.getText();
+
         try {
             JFrame checkingAdd = CheckingController.updateData(name, accountNumber, movementType, amount);
-             Document data = new org.bson.Document();
+            Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnTransfer.getText());

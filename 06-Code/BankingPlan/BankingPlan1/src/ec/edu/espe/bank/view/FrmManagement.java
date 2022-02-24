@@ -1,6 +1,5 @@
 package ec.edu.espe.bank.view;
 
-import ec.edu.espe.bank.controller.CheckingController;
 import ec.edu.espe.bank.controller.ManagementController;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -23,14 +22,15 @@ public class FrmManagement extends javax.swing.JFrame {
         initComponents();
         tableManagement = (DefaultTableModel) tTable.getModel();
     }
-    public void add(float addend1, float addend2){
-        
-        addend1 = 0;
-        addend2 = 0;
-        
-        double sum = addend1 + addend2 ;
-    
-}
+
+    public void add(float transaction, float income) {
+
+        transaction = 0;
+        income = 0;
+
+        double sum = transaction + income;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -62,7 +62,7 @@ public class FrmManagement extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("Management");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 11, 210, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 210, -1));
 
         jTransaction.setText("Transaction :");
         jPanel1.add(jTransaction, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 60, -1, -1));
@@ -82,11 +82,6 @@ public class FrmManagement extends javax.swing.JFrame {
         jIncome.setText("Income :");
         jPanel1.add(jIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 103, -1, -1));
 
-        txtIncome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIncomeActionPerformed(evt);
-            }
-        });
         txtIncome.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtIncomeKeyTyped(evt);
@@ -104,7 +99,7 @@ public class FrmManagement extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 199, 610, 99));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 610, 99));
 
         btnReturn.setText("Return");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
@@ -154,15 +149,13 @@ public class FrmManagement extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtIncomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIncomeActionPerformed
-
-    }//GEN-LAST:event_txtIncomeActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmAccount open = new FrmAccount();
@@ -171,47 +164,41 @@ public class FrmManagement extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
-      
+
         String Trasaction = txtTransaction.getText();
         String Income = txtIncome.getText();
-        
 
         o[0] = txtTransaction.getText();
         o[1] = txtIncome.getText();
-        
 
         tableManagement.addRow(o);
         JOptionPane.showMessageDialog(null, "select the row to calculate the total");
-     
-        
-        
+
         try {
             JFrame managementAdd = ManagementController.updateData(Trasaction, Income);
-             Document data = new org.bson.Document();
+            Document data = new org.bson.Document();
             data.put("Transaction", txtTransaction.getText());
             data.put("Income", txtIncome.getText());
-            
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-      
+
     }//GEN-LAST:event_btnEnterActionPerformed
 
     private void btnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalActionPerformed
         int fila = tTable.getSelectedRow();
         double Transaction = Double.parseDouble(tableManagement.getValueAt(fila, 0).toString());
         double Income = Double.parseDouble(tableManagement.getValueAt(fila, 1).toString());
-        
 
-        float sum = (float) (Transaction + Income );
-       JOptionPane.showMessageDialog(null, "The sum is: " + sum);
+        float sum = (float) (Transaction + Income);
+        JOptionPane.showMessageDialog(null, "The sum is: " + sum);
     }//GEN-LAST:event_btnTotalActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         txtTransaction.setText("");
         txtIncome.setText("");
-        
+
 
     }//GEN-LAST:event_btnCleanActionPerformed
 
@@ -220,27 +207,26 @@ public class FrmManagement extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTransactionActionPerformed
 
     private void txtTransactionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTransactionKeyTyped
-         
-       if (txtTransaction.getText().length() >= 5) {
+
+        if (txtTransaction.getText().length() >= 5) {
             evt.consume();
             JOptionPane.showMessageDialog(this, "ERROR, The account number only has 4 digits and use the (.) for decimal figures.");
             txtTransaction.setText("");
             jinfo1.setText("Use the point for tenths");
-           
+
         }
     }//GEN-LAST:event_txtTransactionKeyTyped
 
     private void txtIncomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIncomeKeyTyped
-        
-        
-        if (txtIncome.getText().length() >= 5 ) {
+
+        if (txtIncome.getText().length() >= 5) {
             evt.consume();
             JOptionPane.showMessageDialog(this, "ERROR, The account number only has 4 digits and use the (.) for decimal figures.");
             txtIncome.setText("");
             jinfo2.setText("Use the point for tenths");
-            
+
         }
- 
+
     }//GEN-LAST:event_txtIncomeKeyTyped
 
     /**

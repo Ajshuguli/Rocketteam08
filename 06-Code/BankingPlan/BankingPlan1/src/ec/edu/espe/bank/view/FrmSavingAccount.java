@@ -1,7 +1,6 @@
 package ec.edu.espe.bank.view;
 
 import com.mongodb.client.MongoCollection;
-import ec.edu.espe.bank.controller.CheckingController;
 import ec.edu.espe.bank.controller.SavingController;
 import ec.edu.espe.bank.model.Movement;
 import java.text.SimpleDateFormat;
@@ -30,6 +29,30 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         modelMovs.addColumn("Type");
         modelMovs.addColumn("Amount");
         tblMovements.setModel(modelMovs);
+    }
+
+    public void deposit(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sum = balance + amount;
+    }
+
+    public void withDraw(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sustract = balance - amount;
+    }
+
+    public void transfer(float balance, float amount) {
+
+        balance = 0;
+        amount = 0;
+
+        double sum = balance + amount;
     }
 
     /**
@@ -574,14 +597,13 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
-        String name=txtNameAccountHolder.getText();
-        String accountNumber=txtAccountNumberHolder.getText ();
-        String movementType=btnDeposit.getText();
-        
-        
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnDeposit.getText();
+
         try {
             JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
-             Document data = new org.bson.Document();
+            Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnDeposit.getText());
@@ -646,14 +668,13 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
-      String name=txtNameAccountHolder.getText();
-        String accountNumber=txtAccountNumberHolder.getText ();
-        String movementType=btnWithdraw.getText();
-        
-        
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnWithdraw.getText();
+
         try {
             JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
-             Document data = new org.bson.Document();
+            Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnWithdraw.getText());
@@ -690,14 +711,13 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         mov[4] = txtAmount.getText();
         modelMovs.addRow(mov);
 
-        String name=txtNameAccountHolder.getText();
-        String accountNumber=txtAccountNumberHolder.getText ();
-        String movementType=btnTransfer.getText();
-        
-        
+        String name = txtNameAccountHolder.getText();
+        String accountNumber = txtAccountNumberHolder.getText();
+        String movementType = btnTransfer.getText();
+
         try {
             JFrame savingAdd = SavingController.updateData(name, accountNumber, movementType, amount);
-             Document data = new org.bson.Document();
+            Document data = new org.bson.Document();
             data.put("Name", txtNameAccountHolder.getText());
             data.put("Account Number", txtAccountNumberHolder.getText());
             data.put("Movement Type", btnTransfer.getText());
