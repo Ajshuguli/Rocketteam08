@@ -20,8 +20,9 @@ public class Interest {
     public void generateInterestSaving() {
 
     }
-    public Interest(){
-        
+
+    public Interest() {
+
     }
 
     /**

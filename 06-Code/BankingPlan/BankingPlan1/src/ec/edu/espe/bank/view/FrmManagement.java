@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 public class FrmManagement extends javax.swing.JFrame {
 
     DefaultTableModel tableManagement;
-    Object[] o = new Object[3];
+    Object[] o = new Object[2];
 
     /**
      * Creates new form FrmManagement
@@ -19,7 +19,14 @@ public class FrmManagement extends javax.swing.JFrame {
         initComponents();
         tableManagement = (DefaultTableModel) tTable.getModel();
     }
-
+    public void add(float addend1, float addend2){
+        
+        addend1 = 0;
+        addend2 = 0;
+        
+        double sum = addend1 + addend2 ;
+    
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,47 +38,73 @@ public class FrmManagement extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jTransaction = new javax.swing.JLabel();
         txtTransaction = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jIncome = new javax.swing.JLabel();
         txtIncome = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        txtCDT = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tTable = new javax.swing.JTable();
         btnReturn = new javax.swing.JButton();
         btnEnter = new javax.swing.JButton();
         btnTotal = new javax.swing.JButton();
         btnClean = new javax.swing.JButton();
+        jinfo1 = new javax.swing.JLabel();
+        jinfo2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("Management");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 11, 210, -1));
 
-        jLabel2.setText("Transaction :");
+        jTransaction.setText("Transaction :");
+        jPanel1.add(jTransaction, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 60, -1, -1));
 
-        jLabel3.setText("Income :");
+        txtTransaction.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTransactionActionPerformed(evt);
+            }
+        });
+        txtTransaction.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTransactionKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtTransaction, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 57, 223, -1));
 
+        jIncome.setText("Income :");
+        jPanel1.add(jIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 103, -1, -1));
+
+<<<<<<< HEAD
         txtIncome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIncomeActionPerformed(evt);
             }
         });
-
+        txtIncome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIncomeKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 100, 222, -1));
+=======
         jLabel4.setText("CDT :");
+>>>>>>> bdaaee85a70865ae40f58192d9a290331a050a74
 
         tTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Transaction", "Income", "CDT"
+                "Transaction", "Income"
             }
         ));
         jScrollPane1.setViewportView(tTable);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 199, 610, 99));
 
         btnReturn.setText("Return");
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +112,7 @@ public class FrmManagement extends javax.swing.JFrame {
                 btnReturnActionPerformed(evt);
             }
         });
+        jPanel1.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 332, -1, -1));
 
         btnEnter.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnEnter.setText("Enter Value");
@@ -87,6 +121,7 @@ public class FrmManagement extends javax.swing.JFrame {
                 btnEnterActionPerformed(evt);
             }
         });
+        jPanel1.add(btnEnter, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 332, 109, -1));
 
         btnTotal.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnTotal.setText("Calculate Total");
@@ -95,6 +130,7 @@ public class FrmManagement extends javax.swing.JFrame {
                 btnTotalActionPerformed(evt);
             }
         });
+        jPanel1.add(btnTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 332, -1, -1));
 
         btnClean.setText("Clean");
         btnClean.addActionListener(new java.awt.event.ActionListener() {
@@ -102,87 +138,19 @@ public class FrmManagement extends javax.swing.JFrame {
                 btnCleanActionPerformed(evt);
             }
         });
+        jPanel1.add(btnClean, new org.netbeans.lib.awtextra.AbsoluteConstraints(494, 332, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(43, 43, 43)
-                                .addComponent(txtTransaction, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(55, 55, 55)
-                                        .addComponent(txtIncome))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addGap(70, 70, 70)
-                                        .addComponent(txtCDT))))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(btnReturn)
-                        .addGap(55, 55, 55)
-                        .addComponent(btnEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(btnTotal)
-                        .addGap(61, 61, 61)
-                        .addComponent(btnClean)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel2))
-                    .addComponent(txtTransaction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel3))
-                    .addComponent(txtIncome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(txtCDT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnReturn)
-                        .addComponent(btnEnter)
-                        .addComponent(btnTotal))
-                    .addComponent(btnClean))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+        jinfo1.setText("*");
+        jPanel1.add(jinfo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 170, -1));
+
+        jinfo2.setText("*");
+        jPanel1.add(jinfo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 180, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,10 +160,6 @@ public class FrmManagement extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtIncomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIncomeActionPerformed
-
-    }//GEN-LAST:event_txtIncomeActionPerformed
-
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmAccount open = new FrmAccount();
         open.setVisible(true);
@@ -203,34 +167,62 @@ public class FrmManagement extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
-        int txtTrasaction;
+        int Trasaction;
         int Income;
-        int CDT;
+        
 
         o[0] = txtTransaction.getText();
         o[1] = txtIncome.getText();
-        o[2] = txtCDT.getText();
+        
 
         tableManagement.addRow(o);
-        JOptionPane.showMessageDialog(null, "Successfull data in the table");
+        JOptionPane.showMessageDialog(null, "select the row to calculate the total");
     }//GEN-LAST:event_btnEnterActionPerformed
 
     private void btnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalActionPerformed
         int fila = tTable.getSelectedRow();
         double Transaction = Double.parseDouble(tableManagement.getValueAt(fila, 0).toString());
         double Income = Double.parseDouble(tableManagement.getValueAt(fila, 1).toString());
-        double CDT = Double.parseDouble(tableManagement.getValueAt(fila, 2).toString());
+        
 
-        float sum = (float) (Transaction + Income + CDT);
-        JOptionPane.showMessageDialog(null, "The sum is: " + sum);
+        float sum = (float) (Transaction + Income );
+       JOptionPane.showMessageDialog(null, "The sum is: " + sum);
     }//GEN-LAST:event_btnTotalActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         txtTransaction.setText("");
         txtIncome.setText("");
-        txtCDT.setText("");
+        
 
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void txtTransactionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTransactionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTransactionActionPerformed
+
+    private void txtTransactionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTransactionKeyTyped
+         
+       if (txtTransaction.getText().length() >= 5) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, The account number only has 4 digits and use the (.) for decimal figures.");
+            txtTransaction.setText("");
+            jinfo1.setText("Use the point for tenths");
+           
+        }
+    }//GEN-LAST:event_txtTransactionKeyTyped
+
+    private void txtIncomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIncomeKeyTyped
+        
+        
+        if (txtIncome.getText().length() >= 5 ) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "ERROR, The account number only has 4 digits and use the (.) for decimal figures.");
+            txtIncome.setText("");
+            jinfo2.setText("Use the point for tenths");
+            
+        }
+ 
+    }//GEN-LAST:event_txtIncomeKeyTyped
 
     /**
      * @param args the command line arguments
@@ -272,14 +264,14 @@ public class FrmManagement extends javax.swing.JFrame {
     private javax.swing.JButton btnEnter;
     private javax.swing.JButton btnReturn;
     private javax.swing.JButton btnTotal;
+    private javax.swing.JLabel jIncome;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jTransaction;
+    private javax.swing.JLabel jinfo1;
+    private javax.swing.JLabel jinfo2;
     private javax.swing.JTable tTable;
-    private javax.swing.JTextField txtCDT;
     private javax.swing.JTextField txtIncome;
     private javax.swing.JTextField txtTransaction;
     // End of variables declaration//GEN-END:variables

@@ -20,17 +20,7 @@ public class FrmSavingAccount extends javax.swing.JFrame {
 
     public FrmSavingAccount() {
         initComponents();
-        btnOK.setEnabled(false);
-        btnCancel.setEnabled(false);
-        btnDeposit.setEnabled(false);
-        btnWithdraw.setEnabled(false);
-        btnTransfer.setEnabled(false);
-        btnClean.setEnabled(false);
-        lblInfBalance.setEnabled(false);
-        txtNameAccountHolder.setEnabled(false);
-        txtAccountNumberHolder.setEnabled(false);
-        txtAmount.setEnabled(false);
-
+        initButtons();
         modelMovs.addColumn("Name");
         modelMovs.addColumn("Account");
         modelMovs.addColumn("Date");
@@ -351,11 +341,6 @@ public class FrmSavingAccount extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblMovements);
 
         txtAvailableBalance.setEditable(false);
-        txtAvailableBalance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAvailableBalanceActionPerformed(evt);
-            }
-        });
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 153, 0));
@@ -535,6 +520,19 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             btnCancel.setEnabled(false);
         }
     }
+
+    public void initButtons() {
+        btnOK.setEnabled(false);
+        btnCancel.setEnabled(false);
+        btnDeposit.setEnabled(false);
+        btnWithdraw.setEnabled(false);
+        btnTransfer.setEnabled(false);
+        btnClean.setEnabled(false);
+        lblInfBalance.setEnabled(false);
+        txtNameAccountHolder.setEnabled(false);
+        txtAccountNumberHolder.setEnabled(false);
+        txtAmount.setEnabled(false);
+    }
     private void btnEstInterestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstInterestActionPerformed
         FrmEstimateInterest open = new FrmEstimateInterest();
         open.setVisible(true);
@@ -694,10 +692,6 @@ public class FrmSavingAccount extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "ERROR: " + err.getMessage());
         }
     }//GEN-LAST:event_btnTransferActionPerformed
-
-    private void txtAvailableBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAvailableBalanceActionPerformed
-
-    }//GEN-LAST:event_txtAvailableBalanceActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmAccount open = new FrmAccount();

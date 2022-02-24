@@ -44,8 +44,9 @@ public class Guide {
     public void learnInterest() {
 
     }
-    public Guide(){
-        
+
+    public Guide() {
+
     }
 
     /**
